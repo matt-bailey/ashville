@@ -1,0 +1,3 @@
+<div>
+    $AutoInheritSidebar
+</div>

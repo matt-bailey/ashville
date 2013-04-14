@@ -1,0 +1,43 @@
+/*
+ * Admin
+ *
+ * This file contains additional styles for the admin area
+ */
+
+#IconColour {
+    input {
+        padding: 5px;
+        border: none;
+        border-radius: 3px;
+    }
+}
+
+.WidgetAreaEditor {
+    border-bottom: 1px solid rgba(201, 205, 206, 0.8);
+    -webkit-box-shadow: 0 1px 0 rgba(244, 245, 245, 0.8);
+    -moz-box-shadow: 0 1px 0 rgba(244, 245, 245, 0.8);
+    box-shadow: 0 1px 0 rgba(244, 245, 245, 0.8);
+}
+
+// Clearfix for WidgetAreaEditor
+.WidgetAreaEditor:before,
+.WidgetAreaEditor:after {
+    content: " ";
+    display: table;
+}
+.WidgetAreaEditor:after { clear: both; }
+.WidgetAreaEditor { *zoom: 1; } // For IE 6/7 only
+
+// Extending widget field styling
+.widgetFields {
+    .SelectionGroup {
+        display: block;
+        border-bottom: 1px solid rgba(201, 205, 206, 0.8);
+        -webkit-box-shadow: 0 1px 0 rgba(244, 245, 245, 0.8);
+        -moz-box-shadow: 0 1px 0 rgba(244, 245, 245, 0.8);
+        box-shadow: 0 1px 0 rgba(244, 245, 245, 0.8);
+        padding: 0 0 7px 0;
+        margin: 0 0 8px 0;
+        li { float: none; }
+    }
+}

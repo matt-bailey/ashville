@@ -1,0 +1,1 @@
+<div><% if HorizontalRule %>$HorizontalRule<% end_if %></div>

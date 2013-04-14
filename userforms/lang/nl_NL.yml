@@ -1,0 +1,159 @@
+nl_NL:
+  CustomRule.ss:
+    BLANK: "Blanco"
+    DELETE: "Verwijder"
+    GREATERTHAN: 'Waarde groter dan'
+    GREATERTHANEQUAL: 'Waarde groter of gelijk aan'
+    HIDETHISFIELD: 'Verberg dit veld'
+    IS: Is
+    LESSTHAN: 'Waarde kleiner dan'
+    LESSTHANEQUAL: 'Waarde kleiner of gelijk aan'
+    NOTBLANK: 'Is Blanco'
+    NOTVALUE: 'Geen waarde'
+    SHOWTHISFIELD: 'Toon dit veld'
+    VALUE: Waarde
+    WHEN: Wanneer
+  EditableCheckbox:
+    PLURALNAME: Selectievakjes
+    SINGULARNAME: 'Selectievakje'
+  EditableCheckboxGroupField:
+    PLURALNAME: 'Selectievakje Groepen'
+    SINGULARNAME: 'Selectievakje Groep'
+  EditableDateField:
+    PLURALNAME: 'Datumvelden'
+    SINGULARNAME: 'Datumveld'
+  EditableDropdown:
+    PLURALNAME: 'Selectielijst veld'
+    SINGULARNAME: 'Selectielijst velden'
+  EditableEmailField:
+    PLURALNAME: 'Email veld'
+    SINGULARNAME: 'Email velden'
+  EditableFileField:
+    PLURALNAME: 'Bestandsupload velden'
+    SINGULARNAME: 'Bestandsupload veld'
+  EditableFormField:
+    CHECKEDBYDEFAULT: 'Standaard aangevinkt'
+    CUSTOMERROR: 'Aangepaste foutbericht'
+    DEFAULTTOTODAY: 'Standaard ingesteld op vandaag?'
+    ENTERQUESTION: 'Voer vraag in'
+    EXTRACLASSA: 'Extra Styling/Layout'
+    EXTRACLASSB: 'Extra css Class - meerdere classen aangeven met een spatie'
+    GROUP: Groep
+    NO: Nee
+    PLURALNAME: 'Bewerkbare formuliervelden'
+    REQUIRED: 'Is dit veld verplicht?'
+    RIGHTTITLE: 'Titel rechts'
+    SINGULARNAME: 'Bewerkbaar formulierveld'
+    YES: Ja
+  EditableFormField.ss:
+    ADD: Toevoegen
+    ADDRULE: 'Regel toevoegen'
+    BLANK: Blanco
+    CUSTOMRULES: 'Aanpasbare regels'
+    DELETE: Verwijder
+    DRAG: 'Versleep om de rangschikking van de velden te wijzigen'
+    FIELDCONFIGURATION: 'Veld opties'
+    FIELDONDEFAULT: 'Toon dit veld?'
+    GREATERTHAN: 'Waarde groter dan'
+    GREATERTHANEQUAL: 'Waarde groter of gelijk aan'
+    HIDE: Verberg
+    HIDETHISFIELD: 'Verberg dit veld'
+    IS: Is
+    LESSTHAN: 'Waarde kleiner dan'
+    LESSTHANEQUAL: 'Waarde kleiner of gelijk aan'
+    LOCKED: 'Deze velden zijn niet aanpasbaar'
+    NOTBLANK: 'Niet blanco'
+    NOTVALUE: 'Geen waarde'
+    OPTIONS: 'Opties'
+    SHOW: Toon
+    SHOWOPTIONS: 'Toon opties'
+    SHOWTHISFIELD: 'Toon dit veld'
+    VALIDATION: 'Validatie'
+    VALUE: Waarde
+    WHEN: Wanneer
+  EditableFormHeading:
+    LEVEL: 'Kies grootte van kopje'
+    PLURALNAME: Kopjes
+    SINGULARNAME: Kopje
+  EditableLiteralField:
+    HIDEFROMREPORT: 'Verberg van rapporten?'
+    PLURALNAME: 'HTML Blokken'
+    SINGULARNAME: 'HTML Blok'
+  EditableMemberListField:
+    PLURALNAME: 'Ledenlijst velden'
+    SINGULARNAME: 'Ledenlijst veld'
+  EditableMultipleOptionField:
+    PLURALNAME: 'Bewerkbare meerdere optie velden'
+    SINGULARNAME: 'Bewerkbare meerdere optie veld'
+  EditableOption:
+    PLURALNAME: 'Bewerkbare opties'
+    SINGULARNAME: 'Bewerkbare optie'
+  EditableOption.ss:
+    DELETE: 'Verwijder optie'
+    DRAG: 'Sleep om volgorde van de opties te herschikken'
+    LOCKED: 'Deze velden zijn niet aanpasbaar'
+  EditableRadioField:
+    PLURALNAME: 'Keuzerondje velden'
+    SINGULARNAME: 'Keuzerondje veld'
+  EditableTextField:
+    NUMBERROWS: 'Aantal rijen'
+    PLURALNAME: 'Tekst velden'
+    SINGULARNAME: 'Tekst veld'
+    TEXTLENGTH: 'Tekst lengte'
+  FieldEditor.ss:
+    ADD: Toevoegen
+    SELECTAFIELD: 'Kies een veld'
+  Form:
+    FIELDISREQUIRED: '%s is verplicht'
+  SiteTree:
+    PLURALNAME: Paginas
+    SINGULARNAME: Pagina
+  SubmittedFileField:
+    DOWNLOADFILE: 'Download bestand'
+    PLURALNAME: 'Ingediende bestandsvelden'
+    SINGULARNAME: Ingediende bestandsveld'
+  SubmittedForm:
+    PLURALNAME: 'Ingediende formulieren'
+    SINGULARNAME: 'Ingediende formulier'
+  SubmittedFormField:
+    PLURALNAME: 'Ingediende formvelden'
+    SINGULARNAME: 'Ingediende formveld'
+  SubmittedFormReportField.ss:
+    DELETEALLSUBMISSIONS: 'Verwijder alle inzendingen'
+    DELETESUBMISSION: 'Verwijder inzending'
+    EXPORTSUBMISSIONS: 'Exporteer inzendingen naar CSV'
+    NOSUBMISSIONS: 'Geen inzendingen'
+    PAGES: 'Paginas'
+    SUBMITTED: 'Ingediend op'
+  UserDefinedForm:
+    DESCRIPTION: 'Generieke content pagina'
+    EMAILADDRESS: Email
+    EMAILBODY: Tekst
+    EMAILFROM: Van
+    EMAILSUBJECT: 'Email onderwerp'
+    EmailFromContent: 'Met het vanaf adres kunt u instellen waar het ingediende formulier vandaag komt. Op de meeste servers dien je een email in te vullen van hetzelfde domein als deze website. Bijvoorbeeld op jouwwebsite.nl dan dien je het volgende adres in te stellen iets@jouwwebsite.nl. Echter kunt u bij antwoorden op ieder email adres invullen.'
+    FORM: Form Indeling
+    FORMOPTIONS: 'Form Opties'
+    FORMSUBMISSIONS: 'Form Inzendingen'
+    FROMADDRESS: 'Email verzonden vanaf'
+    HIDEFORMDATA: 'Verberg formulier gegevens in email?'
+    HIDEFIELDLABELS: 'Verberg veld labels'
+    ENABLELIVEVALIDATION: 'Zet live validatie aan'
+    ONCOMPLETELABEL: 'Toon na voltooiing van het formulier'
+    ORSELECTAFIELDTOUSEASFROM: '.. of selecteer een veld om te gebruiken als antwoorden op'
+    ORSELECTAFIELDTOUSEASTO: '.. of selecteer een veld om te gebruiken als ontvanger'
+    PLURALNAME: 'User Defined Forms'
+    RECEIVED: 'Ontvangen inzendingen'
+    REPLYADDRESS: 'E-mail voor antwoord op'
+    SAVESUBMISSIONS: 'Schakel opslaan van inzendingen uit'
+    SENDEMAILTO: 'Stuur email naar'
+    SENDPLAIN: 'Verstuur als platte tekst? (HTML wordt verwijderd)'
+    SHOWCLEARFORM: 'Toon opnieuw instellen van form'
+    SINGULARNAME: 'User Defined Form'
+    SUBMITBUTTON: Indienen
+    TEXTONSUBMIT: 'Tekst voor indienen button:'
+    ADDRECIPIENT: 'Email ontvanger toevoegen'
+    EMAILRECIPIENTS: 'Email ontvangers'
+  UserDefinedForm_EmailRecipient:
+    PLURALNAME: 'User Defined Form Email Ontvangers'
+    SINGULARNAME: 'User Defined Form Email Ontvanger'

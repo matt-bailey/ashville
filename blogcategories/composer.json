@@ -1,0 +1,20 @@
+{
+    "name": "silverstripe/blogcategories",
+    "description": "This module adds a manageable list of categories to the SilverStripe blog Module.",
+    "type": "silverstripe-module",
+    "keywords": ["silverstripe", "blog", "categories", "blogcategories"],
+    "authors": [
+    {
+        "name": "Ryan McLaren",
+        "email": "ryansm@outlook.com"
+    },
+    {
+        "name": "Matt Bailey",
+        "email": "me@mattbailey.co"
+    }
+    ],
+    "require":
+    {
+        "silverstripe/framework": "3.*"
+    }
+}

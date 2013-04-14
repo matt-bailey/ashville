@@ -1,0 +1,16 @@
+{
+    "name": "gpmd/ss-bootstrap",
+    "description": "Twitter Bootstrap / HTML5 Boilerplate theme for Silverstripe 3",
+    "type": "silverstripe-theme",
+    "keywords": ["gpmd", "silverstripe", "theme", "twitter bootstrap", "twitter", "bootstrap", "html5 boilerplate", "html5", "boilerplate"],
+    "stability": "dev",
+    "authors": [
+        {
+            "name": "Matt Bailey",
+            "email": "matt@gpmd.co.uk"
+        }
+    ],
+    "require": {
+        "silverstripe/framework": ">=3.0"
+    }
+}

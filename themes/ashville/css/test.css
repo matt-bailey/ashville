@@ -1,0 +1,3 @@
+.span-quarter{width:22.22222222222222%;}
+@media (min-width: 1200px){.span-quarter{width:21.66666666666667%;}}@media (min-width: 768px) and (max-width: 979px){.span-quarter{width:46.415770609319%;}}@media (max-width: 767px){.span-quarter{width:100%;}}.span-half{width:47.22222222222222%;}
+@media (min-width: 1200px){.span-half{width:46.66666666666667%;}}@media (min-width: 768px) and (max-width: 979px){.span-half{width:96.415770609319%;}}@media (max-width: 767px){.span-half{width:100%;}}

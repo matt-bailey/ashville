@@ -1,0 +1,64 @@
+/**
+ * Mixins
+ */
+
+/* ==========================================================================
+   Additional media query width helpers
+   ========================================================================== */
+
+/* Media query variables */
+
+@large-desktop-and-up: ~"(min-width: 1200px)";
+@tablet-to-desktop: ~"(min-width: 768px) and (max-width: 979px)";
+@landscape-phone-to-tablet: ~"(max-width: 767px)";
+
+/* Width mixins */
+
+.span-quarter (@value) {
+    .span-quarter { width: @value; }
+}
+.span-half (@value) {
+    .span-half { width: @value; }
+}
+
+/* Test */
+
+/* .span-quarter */
+
+// Default (desktop)
+.span-quarter (22.22222222222222%);
+
+// Large desktop and up
+@media @large-desktop-and-up {
+    .span-quarter (21.66666666666667%);
+}
+
+// Tablet to desktop
+@media @tablet-to-desktop {
+    .span-quarter (46.415770609319%);
+}
+
+// Landscape phone to desktop/tablet
+@media @landscape-phone-to-tablet {
+    .span-quarter (100%);
+}
+
+/* .span-half */
+
+// Default (desktop)
+.span-half (47.22222222222222%);
+
+// Large desktop and up
+@media @large-desktop-and-up {
+    .span-half (46.66666666666667%);
+}
+
+// Tablet to desktop
+@media @tablet-to-desktop {
+    .span-half (96.415770609319%);
+}
+
+// Landscape phone to desktop/tablet
+@media @landscape-phone-to-tablet {
+    .span-half (100%);
+}

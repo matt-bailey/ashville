@@ -1,0 +1,25 @@
+/**
+ * Mixins
+ */
+
+/* ==========================================================================
+   Additional media query width helpers
+   ========================================================================== */
+
+/* Media query variables */
+
+// Large desktop and up
+@large-desktop-and-up: ~"(min-width: 1200px)";
+// Tablet to desktop
+@tablet-to-desktop: ~"(min-width: 768px) and (max-width: 979px)";
+// Landscape phone to desktop/tablet
+@landscape-phone-to-tablet: ~"(max-width: 767px)";
+
+/* Width mixins */
+
+.span-quarter (@value) {
+    .span-quarter { width: @value; }
+}
+.span-half (@value) {
+    .span-half { width: @value; }
+}
