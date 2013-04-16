@@ -281,32 +281,6 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/bootstrap\/less\/thumbnails.less" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bootstrap\/less\/thumbnails.less",
-      "outputStyle" : 1,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/bootstrap\/css\/thumbnails.css",
-      "strictImports" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
-    },
-    "\/bootstrap\/less\/breadcrumbs.less" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bootstrap\/less\/breadcrumbs.less",
-      "outputStyle" : 1,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/bootstrap\/css\/breadcrumbs.css",
-      "strictImports" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
-    },
     "\/bootstrap\/less\/tables.less" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -320,6 +294,19 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
+    "\/bootstrap\/less\/thumbnails.less" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bootstrap\/less\/thumbnails.less",
+      "outputStyle" : 1,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/bootstrap\/css\/thumbnails.css",
+      "strictImports" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
     "\/bootstrap\/less\/forms.less" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -329,6 +316,19 @@
       "outputStyle" : 1,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/bootstrap\/css\/forms.css",
+      "strictImports" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
+    "\/bootstrap\/less\/breadcrumbs.less" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bootstrap\/less\/breadcrumbs.less",
+      "outputStyle" : 1,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/bootstrap\/css\/breadcrumbs.css",
       "strictImports" : 0,
       "fileType" : 1,
       "debugStyle" : 0
@@ -504,15 +504,15 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/less\/scaffolding.less" : {
+    "\/less\/editor.less" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/less\/scaffolding.less",
+      "inputAbbreviatedPath" : "\/less\/editor.less",
       "outputStyle" : 1,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/scaffolding.css",
+      "outputAbbreviatedPath" : "\/css\/editor.css",
       "strictImports" : 0,
       "fileType" : 1,
       "debugStyle" : 0
@@ -541,15 +541,15 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/less\/editor.less" : {
+    "\/less\/scaffolding.less" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/less\/editor.less",
+      "inputAbbreviatedPath" : "\/less\/scaffolding.less",
       "outputStyle" : 1,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/editor.css",
+      "outputAbbreviatedPath" : "\/css\/scaffolding.css",
       "strictImports" : 0,
       "fileType" : 1,
       "debugStyle" : 0

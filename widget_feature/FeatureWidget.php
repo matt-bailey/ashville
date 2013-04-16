@@ -8,7 +8,7 @@ class FeatureWidget extends Widget
     static $db = array(
         'WidgetTitle' => 'Varchar(255)',
         'FeatureTitle' => 'Varchar(255)',
-        'FeatureText' => 'Text',
+        'FeatureText' => 'HTMLText',
         'ButtonText' => 'Varchar(255)',
         'InternalLink' => 'Text',
         'ExternalLink' => 'Text',
@@ -64,7 +64,7 @@ class FeatureWidget extends Widget
         $fields->merge(
             new FieldList(
                 new TextField('FeatureTitle', 'Feature Title'),
-                new TextField('FeatureText', 'Feature Text'),
+                new TextareaField('FeatureText', 'Feature Text<br />(HTML allowed)'),
                 new DropdownField('FeatureImageID', 'Image'.$featureImage, $dropdown, '', null, 'No image'),
                 new DropdownField('InternalLink', 'Choose an internal link', SiteTree::get()->map(), '', null, 'No page selected'),
                 new TextField('ExternalLink', 'Or, enter an external link'),
