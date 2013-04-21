@@ -3,45 +3,26 @@
  */
 
 /* ==========================================================================
-   Extending Bootstrap's column widths
+   Stuff to tidy up
    ========================================================================== */
 
-/* .span-quarter */
+//.img-link { display: block; }
 
-// Default (desktop)
-.span-quarter (22.22222222222222%);
-
-// Large desktop and up
-@media @large-desktop-and-up {
-    .span-quarter (21.66666666666667%);
+hr {
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-color: @hrBorder;
 }
 
-// Tablet to desktop
-@media @tablet-to-desktop {
-    .span-quarter (46.415770609319%);
+.fix-bottom {
+    position: absolute;
+    bottom: 0;
 }
 
-// Landscape phone to desktop/tablet
-@media @landscape-phone-to-tablet {
-    .span-quarter (100%);
-}
+.visible-no { display: none; }
 
-/* .span-half */
-
-// Default (desktop)
-.span-half (47.22222222222222%);
-
-// Large desktop and up
-@media @large-desktop-and-up {
-    .span-half (46.66666666666667%);
-}
-
-// Tablet to desktop
-@media @tablet-to-desktop {
-    .span-half (96.415770609319%);
-}
-
-// Landscape phone to desktop/tablet
-@media @landscape-phone-to-tablet {
-    .span-half (100%);
+.sidebar {
+    &.span3 {
+        .span3 { margin-left: 0; }
+    }
 }

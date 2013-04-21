@@ -13,18 +13,18 @@
     </div>
 </div>
 <div class="row">
-    <div class="<% if ClassName = NoSidebarPage %>span12<% else %>span9<% end_if %>">
+    <div class="span9">
         <article>
             <header class="page-header">
                 <h1>$Title</h1>
             </header>
-            <%-- <section class="content">$Content</section> --%>
-            <section class="content row">$MainContentWidgetArea</section>
+            <section class="content">$Content</section>
         </article>
+        <% loop Children %>
+        <% include CaseStudyTeaser %>
+        <% end_loop %>
         $Form
         $PageComments
     </div>
-    <% if ClassName != NoSidebarPage %>
     <% include SideBar %>
-    <% end_if %>
 </div>

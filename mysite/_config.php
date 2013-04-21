@@ -46,10 +46,11 @@ DataObject::add_extension('BlogHolder', 'BlogHolderDecorator');
 DataObject::add_extension('BlogEntry', 'BlogEntryDecorator');
 
 // Add additional admin css
+LeftAndMain::require_css('mysite/fancybox/jquery.fancybox.css');
 LeftAndMain::require_css('mysite/css/admin.css');
 
-// Add fancybox to admin
+// Add additional admin js
 LeftAndMain::require_javascript('mysite/fancybox/lib/jquery.mousewheel-3.0.6.pack.js');
 LeftAndMain::require_javascript('mysite/fancybox/jquery.fancybox.pack.js');
 LeftAndMain::require_javascript('mysite/js/admin.min.js');
-LeftAndMain::require_css('mysite/fancybox/jquery.fancybox.css');
+

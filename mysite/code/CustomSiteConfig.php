@@ -9,7 +9,7 @@ class CustomSiteConfig extends DataExtension
         'CompanyEmail' => 'Varchar(255)',
         'CompanyNumber' => 'Varchar(255)',
         'CompanyVatNumber' => 'Varchar(255)',
-        'ServicesSlidesPosition' => "Enum('right, below')"
+        //'ServicesSlidesPosition' => "Enum('right, below')"
     );
     
     static $many_many = array(
@@ -103,7 +103,7 @@ class CustomSiteConfig extends DataExtension
         /**
          * Services carousel position
          */
-        $fields->addFieldsToTab('Root.Global.Header.CustomerService', array(
+        /*$fields->addFieldsToTab('Root.Global.Header.CustomerService', array(
             new DropdownField(
                 'ServicesSlidesPosition',
                 'Services Slides Position<br />(Relative to hero slideshow)',
@@ -111,7 +111,7 @@ class CustomSiteConfig extends DataExtension
                 '',
                 '',
                 'Choose a position')
-        ));
+        ));*/
 
         /**
          * Footer buttons

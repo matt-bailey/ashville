@@ -1,4 +1,4 @@
-<div id="services-slideshow" class="carousel<% if $SiteConfig.ServicesSlidesPosition %> position-$SiteConfig.ServicesSlidesPosition<% end_if %>">
+<div id="services-slideshow" class="carousel<% if ServicesSlidesPosition %> position-$ServicesSlidesPosition<% end_if %>">
     <div class="carousel-inner">
         <% loop $SiteConfig.ServicesSlides %>
         <article class="item<% if First %> active<% end_if %>">

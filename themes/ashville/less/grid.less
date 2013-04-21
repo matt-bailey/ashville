@@ -1,0 +1,106 @@
+/**
+ * Grid
+ */
+
+/* ==========================================================================
+   Extending the Bootstrap column widths
+   ========================================================================== */
+
+/* .span-quarter */
+
+// Default (desktop)
+.span-quarter (22.22222222222222%);
+
+// Large desktop and up
+@media @large-desktop-and-up {
+    .span-quarter (21.66666666666667%);
+}
+
+// Tablet to desktop
+@media @tablet-to-desktop {
+    .span-quarter (46.415770609319%);
+}
+
+// Landscape phone to desktop/tablet
+@media @landscape-phone-to-tablet {
+    .span-quarter (100%);
+}
+
+/* .span-half */
+
+// Default (desktop)
+.span-half (47.22222222222222%);
+
+// Large desktop and up
+@media @large-desktop-and-up {
+    .span-half (46.66666666666667%);
+}
+
+// Tablet to desktop
+@media @tablet-to-desktop {
+    .span-half (96.415770609319%);
+}
+
+// Landscape phone to desktop/tablet
+@media @landscape-phone-to-tablet {
+    .span-half (100%);
+}
+
+/* Full width with half-width images (Feature widget)
+   ========================================================================== */
+
+/* .span9 */
+
+// Default (desktop)
+.span9-img-left (48.57142857142857%, @gridGutterWidth);
+.span9-img-right (48.57142857142857%, @gridGutterWidth);
+
+// Large desktop and up
+@media @large-desktop-and-up {
+    .span9-img-left (48.27586206896552%, @gridGutterWidth1200);
+    .span9-img-right (48.27586206896552%, @gridGutterWidth1200);
+}
+
+// Tablet to desktop
+@media @tablet-to-desktop {
+    .span9-img-left (48.14126394052045%, @gridGutterWidth);
+    .span9-img-right (48.14126394052045%, @gridGutterWidth);
+}
+
+// Landscape phone to desktop/tablet
+@media @landscape-phone-to-tablet {
+    .span9-img-left (100%, 0);
+    .span9-img-right (100%, 0);
+}
+
+/* .span12 */
+
+// Default (desktop)
+.span12-img-left (48.93617021276596%, @gridGutterWidth);
+.span12-img-right (48.93617021276596%, @gridGutterWidth);
+
+// Large desktop and up
+@media @large-desktop-and-up {
+    .span12-img-left (48.71794871794872%, @gridGutterWidth1200);
+    .span12-img-right (48.71794871794872%, @gridGutterWidth1200);
+}
+
+// Tablet to desktop
+@media @tablet-to-desktop {
+    .span12-img-left (48.61878453038674%, @gridGutterWidth);
+    .span12-img-right (48.61878453038674%, @gridGutterWidth);
+}
+
+// Landscape phone to desktop/tablet
+@media @landscape-phone-to-tablet {
+    .span12-img-left (100%, 0);
+    .span12-img-right (100%, 0);
+}
+
+// Remove floats
+@media @landscape-phone-to-tablet {
+    .img-left,
+    .img-right {
+        img { float: none !important; }
+    }
+}

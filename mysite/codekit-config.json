@@ -11,17 +11,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/fancybox\/jquery.fancybox.pack.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/fancybox\/jquery.fancybox.pack.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/fancybox\/jquery.fancybox.pack.min.js",
-      "fileType" : 64
-    },
     "\/symbolset\/ss-social\/webfonts\/ss-social.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -33,12 +22,41 @@
       "outputAbbreviatedPath" : "\/symbolset\/ss-social\/webfonts\/ss-social.min.js",
       "fileType" : 64
     },
+    "\/fancybox\/jquery.fancybox.pack.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/fancybox\/jquery.fancybox.pack.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/fancybox\/jquery.fancybox.pack.min.js",
+      "fileType" : 64
+    },
     "\/symbolset\/ss-standard\/documentation.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/symbolset\/ss-standard\/documentation.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/code\/CaseStudyHolder.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/code\/CaseStudyHolder.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/_config.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_config.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -52,15 +70,6 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/admin.min.min.js",
       "fileType" : 64
-    },
-    "\/_config.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_config.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/code\/_Page.php" : {
       "ignoreWasSetByUser" : 0,
@@ -124,6 +133,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/fancybox\/fancybox_overlay.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/fancybox\/fancybox_overlay.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/fancybox\/fancybox_overlay.png",
+      "initialSize" : 1003,
+      "fileType" : 8192
+    },
     "\/code\/model\/FooterLogo.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -152,17 +172,6 @@
       "inputAbbreviatedPath" : "\/code\/model\/SlideItem.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
-    },
-    "\/fancybox\/fancybox_overlay.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/fancybox\/fancybox_overlay.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/fancybox\/fancybox_overlay.png",
-      "initialSize" : 1003,
-      "fileType" : 8192
     },
     "\/code\/model\/HeaderLink.php" : {
       "ignoreWasSetByUser" : 0,
@@ -196,6 +205,15 @@
       "strictImports" : 0,
       "fileType" : 1,
       "debugStyle" : 0
+    },
+    "\/code\/CaseStudyPage.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/code\/CaseStudyPage.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/code\/CustomSiteConfig.php" : {
       "ignoreWasSetByUser" : 0,
@@ -239,6 +257,24 @@
       "outputAbbreviatedPath" : "\/fancybox\/helpers\/jquery.fancybox-thumbs.min.js",
       "fileType" : 64
     },
+    "\/fancybox\/helpers\/jquery.fancybox-thumbs.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/fancybox\/helpers\/jquery.fancybox-thumbs.css",
+      "outputAbbreviatedPath" : "\/No Output Path",
+      "fileType" : 16
+    },
+    "\/symbolset\/ss-social\/webfonts\/ss-social.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/symbolset\/ss-social\/webfonts\/ss-social.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/fancybox\/fancybox_sprite.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -250,24 +286,6 @@
       "initialSize" : 1362,
       "fileType" : 8192
     },
-    "\/symbolset\/ss-social\/webfonts\/ss-social.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/symbolset\/ss-social\/webfonts\/ss-social.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/fancybox\/helpers\/jquery.fancybox-thumbs.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/fancybox\/helpers\/jquery.fancybox-thumbs.css",
-      "outputAbbreviatedPath" : "\/No Output Path",
-      "fileType" : 16
-    },
     "\/fancybox\/helpers\/jquery.fancybox-buttons.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -277,15 +295,15 @@
       "outputAbbreviatedPath" : "\/No Output Path",
       "fileType" : 16
     },
-    "\/fancybox\/helpers\/jquery.fancybox-buttons.js" : {
+    "\/symbolset\/ss-standard\/webfonts\/ss-standard.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/fancybox\/helpers\/jquery.fancybox-buttons.js",
+      "inputAbbreviatedPath" : "\/symbolset\/ss-standard\/webfonts\/ss-standard.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/fancybox\/helpers\/jquery.fancybox-buttons.min.js",
+      "outputAbbreviatedPath" : "\/symbolset\/ss-standard\/webfonts\/ss-standard.min.js",
       "fileType" : 64
     },
     "\/js\/admin.js" : {
@@ -317,15 +335,15 @@
       "outputAbbreviatedPath" : "\/No Output Path",
       "fileType" : 16
     },
-    "\/symbolset\/ss-standard\/webfonts\/ss-standard.js" : {
+    "\/fancybox\/helpers\/jquery.fancybox-buttons.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/symbolset\/ss-standard\/webfonts\/ss-standard.js",
+      "inputAbbreviatedPath" : "\/fancybox\/helpers\/jquery.fancybox-buttons.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/symbolset\/ss-standard\/webfonts\/ss-standard.min.js",
+      "outputAbbreviatedPath" : "\/fancybox\/helpers\/jquery.fancybox-buttons.min.js",
       "fileType" : 64
     },
     "\/code\/model\/ServicesSlide.php" : {
@@ -386,6 +404,15 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
+    "\/code\/model\/FloorPlanItem.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/code\/model\/FloorPlanItem.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/fancybox\/lib\/jquery.mousewheel-3.0.6.pack.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -397,21 +424,21 @@
       "outputAbbreviatedPath" : "\/fancybox\/lib\/jquery.mousewheel-3.0.6.pack.min.js",
       "fileType" : 64
     },
-    "\/symbolset\/ss-social\/documentation.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/symbolset\/ss-social\/documentation.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/code\/BlogEntryDecorator.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/code\/BlogEntryDecorator.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/symbolset\/ss-social\/documentation.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/symbolset\/ss-social\/documentation.html",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     }

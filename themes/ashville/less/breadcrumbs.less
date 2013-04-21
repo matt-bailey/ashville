@@ -1,0 +1,32 @@
+/**
+ * Breadcrumbs
+ */
+
+@media @large-desktop-and-up {
+    .breadcrumb { margin-left: @baseLineHeight * 1.5 !important; }
+}
+@media @tablet-to-desktop {
+    .breadcrumb { margin-left: @baseLineHeight !important; }
+}
+@media @landscape-phone-to-tablet {
+    .breadcrumb { margin-left: 0 !important; }
+}
+
+.breadcrumb {
+    padding: 0;
+    background-color: transparent;
+    > li {
+        text-shadow: none;
+        > .divider {
+            padding: 0 5px;
+            color: @grayLight;
+        }
+    }
+    > .active {
+        color: @white;
+    }
+    a {
+        color: @grayLight;
+        &:hover { color: darken(@grayLight, 15%); }
+    }
+}

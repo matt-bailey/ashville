@@ -1,6 +1,7 @@
 <?php
 
-class NoSidebarPage extends Page {
+class NoSidebarPage extends Page
+{
 
     static $description = "A generic content page without a sidebar";
 
@@ -13,4 +14,7 @@ class NoSidebarPage extends Page {
 
 }
 
-class NoSidebarPage_Controller extends Page_Controller {}
+class NoSidebarPage_Controller extends Page_Controller
+{
+    
+}

@@ -1,3 +1,3 @@
-<div>
+<aside class="sidebar span3">
     $AutoInheritSidebar
-</div>
+</aside>

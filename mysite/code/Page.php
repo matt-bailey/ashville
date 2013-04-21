@@ -2,20 +2,17 @@
 class Page extends SiteTree
 {
     public static $db = array(
-        //'UseParentWidgets' => 'Boolean',
         'ContentArea2' => 'HTMLText',
-        'ContentArea3' => 'HTMLText'/*,
-        'SlideCaptionPosition' => "Enum('top, bottom')"*/
+        'ContentArea3' => 'HTMLText',
+        'SlideCaptionPosition' => "Enum('top, bottom')",
+        //'ShowServicesSlides' => "Enum('yes, no')",
+        //'ServicesSlidesPosition' => "Enum('right, below')"
     );
 
     static $has_one = array(
         "MainContentWidgetArea" => "WidgetArea",
         "SidebarWidgetArea" => "WidgetArea"
     );
-
-    /*static $defaults = array(
-        'UseParentWidgets' => 1
-    );*/
 
     static $many_many = array(
         'SlideItems' => 'SlideItem'
@@ -27,6 +24,13 @@ class Page extends SiteTree
         )
     );
 
+    // Set default values
+    public function populateDefaults()
+    {
+        parent::populateDefaults();
+        $this->ShowServicesSlides = 'yes';
+    }
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
@@ -34,18 +38,35 @@ class Page extends SiteTree
         // Remove the blog module sidebar
         $fields->removeByName('SideBar');
 
+        // Services Slides carousel position
+        /*$fields->addFieldsToTab('Root.Main', array(
+            new DropdownField(
+                'ShowServicesSlides',
+                'Show Services Slides',
+                $this->owner->dbObject('ShowServicesSlides')->enumValues(),
+                '',
+                '',
+                ''),
+            new DropdownField(
+                'ServicesSlidesPosition',
+                'Services Slides Position<br />(Relative to main slideshow)',
+                $this->owner->dbObject('ServicesSlidesPosition')->enumValues(),
+                '',
+                '',
+                'Choose a position')
+        ), 'Content');*/
+
         $fields->addFieldsToTab('Root.Main', array(
             new HtmlEditorField('ContentArea2', 'Content Area 2', 16),
             new HtmlEditorField('ContentArea3', 'Content Area 3', 16)
         ));
-        //$fields->addFieldToTab('Root.Widgets', new CheckboxField('UseParentWidgets', 'Inherit widgets from parent'));
         $fields->addFieldToTab("Root.Widgets", new WidgetAreaEditor("MainContentWidgetArea"));
         $fields->addFieldToTab("Root.Widgets", new WidgetAreaEditor("SidebarWidgetArea"));
 
         /**
          * Slide caption position
          */
-        /*$fields->addFieldsToTab('Root.SlideShow', array(
+        $fields->addFieldsToTab('Root.SlideShow', array(
             new DropdownField(
                 'SlideCaptionPosition',
                 'Slide Caption Position',
@@ -53,7 +74,7 @@ class Page extends SiteTree
                 '',
                 '',
                 'Choose a position')
-        ));*/
+        ));
 
         /**
          * Slide items
@@ -74,18 +95,6 @@ class Page extends SiteTree
 
         return $fields;
     }
-
-    /**
-     * Inherit parent widgets
-     */
-    /*public function InheritedWidgets()
-    {
-        if ($this->UseParentWidgets && $this->ParentID) {
-            return $this->Parent()->InheritedWidgets();
-        } else {
-            return $this->WidgetArea();
-        }
-    }*/
 
     /**
      * Auto inherit widgets

@@ -23,6 +23,19 @@ function hideWidgetAreaType() {
     });
 }
 
+function initialiseTinyMCE() {
+    tinyMCE.init({
+        mode: "specific_textareas",
+        editor_selector: "textarea",
+        width: "356",
+        theme_advanced_buttons1 : "bold,italic,underline,strikethrough,separator,justifyleft,justifycenter,justifyright,justifyfull,separator,bullist,numlist",
+        theme_advanced_buttons2 : "outdent,indent,undo,redo,separator,link,unlink,image,cleanup,help,code,hr,removeformat",
+        theme_advanced_buttons3 : "formatselect",
+        extended_valid_elements: "img[class|id|src|alt|title|onmouseover|onmouseout|name|usemap]",
+        theme_advanced_blockformats : "p,div,h1,h2,h3,h4,h5,h6,blockquote"
+    });
+}
+
 /**
  * After document ready calls
  */
@@ -32,6 +45,7 @@ jQuery(document).ready(function() {
     // Manipulate the interface
     renameWidgetTitle();
     hideWidgetAreaType();
+    initialiseTinyMCE();
 });
 
 /**
@@ -41,4 +55,5 @@ jQuery(document).ajaxStop(function() {
     // Manipulate the interface
     renameWidgetTitle();
     hideWidgetAreaType();
+    initialiseTinyMCE();
 });

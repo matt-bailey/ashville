@@ -23,3 +23,56 @@
 .span-half (@value) {
     .span-half { width: @value; }
 }
+
+/* ... with images */
+
+// .span9
+.span9-img-left (@width, @margin) {
+    .span9{
+        &.img-left { 
+            img {
+                width: @width;
+                float: left;
+                min-height: 1px; // prevent collapsing columns
+                margin-right: @margin;
+            }
+        }
+    }
+}
+.span9-img-right (@width, @margin) {
+    .span9 {
+        &.img-right { 
+            img {
+                width: @width;
+                float: right;
+                min-height: 1px; // prevent collapsing columns
+                margin-left: @margin;
+            }
+        }
+    }
+}
+// .span12
+.span12-img-left (@width, @margin) {
+    .span12{
+        &.img-left { 
+            img {
+                width: @width;
+                float: left;
+                min-height: 1px; // prevent collapsing columns
+                margin-right: @margin;
+            }
+        }
+    }
+}
+.span12-img-right (@width, @margin) {
+    .span12 {
+        &.img-right { 
+            img {
+                width: @width;
+                float: right;
+                min-height: 1px; // prevent collapsing columns
+                margin-left: @margin;
+            }
+        }
+    }
+}

@@ -1,12 +1,12 @@
-<div id="Content" class="searchResults">
-    <div class="page-header">
+<article id="Content" class="searchResults">
+    <header class="page-header">
         <h1>$Title</h1>
-    </div>
+    </header>
     <% if $Query %>
     <p class="searchQuery">You searched for &quot;{$Query}&quot;</p>
     <% end_if %>
     <% if $Results %>
-    <div id="SearchResults">
+    <section id="SearchResults">
         <% loop $Results %>
         <div class="well">
             <h4>
@@ -24,7 +24,7 @@
             <a class="readMoreLink" href="$Link" title="Read more about &quot;{$Title}&quot;">Read more about &quot;{$Title}&quot;...</a>
         </div>
         <% end_loop %>
-    </div>
+    </section>
     <% else %>
     <p>Sorry, your search query did not return any results.</p>
     <% end_if %>
@@ -50,4 +50,4 @@
         <p>Page $Results.CurrentPage of $Results.TotalPages</p>
     </div>
     <% end_if %>
-</div>
+</article>

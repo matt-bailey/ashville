@@ -12,7 +12,8 @@ class FeatureWidget extends Widget
         'ButtonText' => 'Varchar(255)',
         'InternalLink' => 'Text',
         'ExternalLink' => 'Text',
-        'WidgetLayoutType' => 'Int'
+        'WidgetLayoutType' => 'Int',
+        'BackgroundFill' => 'Int'
     );
 
     static $has_one = array( 
@@ -27,12 +28,17 @@ class FeatureWidget extends Widget
         5 => 'Full width, image right'
     );
 
+    static $background_fill = array(
+        1 => 'Yes',
+        2 => 'No'
+    );
+
     // Set default values
     public function populateDefaults()
     {
-        // Set the default value for the widget layout type
         parent::populateDefaults();
         $this->WidgetLayoutType = 2;
+        $this->BackgroundFill = 1;
     }
     
     function getCMSFields()
@@ -66,6 +72,7 @@ class FeatureWidget extends Widget
                 new TextField('FeatureTitle', 'Feature Title'),
                 new TextareaField('FeatureText', 'Feature Text<br />(HTML allowed)'),
                 new DropdownField('FeatureImageID', 'Image'.$featureImage, $dropdown, '', null, 'No image'),
+                new DropdownField('BackgroundFill', 'Background Fill', self::$background_fill),
                 new DropdownField('InternalLink', 'Choose an internal link', SiteTree::get()->map(), '', null, 'No page selected'),
                 new TextField('ExternalLink', 'Or, enter an external link'),
                 new TextField('ButtonText', 'Button Text', 'Read More'),
@@ -93,6 +100,15 @@ class FeatureWidget extends Widget
             return $this->ExternalLink;
         } else {
             return null;
+        }
+    }
+
+    public function getBackgroundFillType()
+    {
+        if ($this->BackgroundFill)
+        {
+            if ($this->BackgroundFill == 1) { return 'bg-fill'; }
+            else if ($this->BackgroundFill == 2) { return 'no-bg-fill'; }
         }
     }
 

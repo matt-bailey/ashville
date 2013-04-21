@@ -1,0 +1,276 @@
+/**
+ * Widgets
+ *
+ * Widget specific styling
+ */
+
+/* ==========================================================================
+   Widget defaults
+   ========================================================================== */
+
+.WidgetHolder,
+.widget-content { position: relative; }
+
+.widget-actions { width: 100%; }
+
+/* ==========================================================================
+   Feature widget
+   ========================================================================== */
+
+// Remove top margin from h4
+.FeatureWidget {
+    &[class*="img-"] {
+        .h4 { margin-top: 0; }
+    }
+}
+
+// Add it back on for landscape phone to desktop/tablet
+@media @landscape-phone-to-tablet {
+    .FeatureWidget {
+        &[class*="img-"] {
+            .h4 { margin-top: @baseLineHeight / 2; }
+        }
+    }
+}
+
+// Add bottom margin to images
+.FeatureWidget {
+    img { margin-bottom: @baseLineHeight; }
+}
+
+// Remove it from images floated left or right
+.FeatureWidget {
+    &[class*="img-"] {
+        img { margin-bottom: 0; }
+    }
+}
+
+// Switch colour palette
+.bg-fill {
+    background-color: @black;
+    color: @white;
+}
+
+// Add padding to widget content
+.widget-content {
+    padding-bottom: @gridGutterWidth1200;
+}
+.bg-fill {
+    .widget-content { padding-top: @gridGutterWidth; }
+}
+
+// .widget-content floats
+.span9,
+.span12 {
+    &.img-left { 
+        .widget-content {
+            float: left;
+            min-height: 1px; // prevent collapsing columns
+        }
+    }
+    &.img-right { 
+        .widget-content {
+            float: right;
+            min-height: 1px; // prevent collapsing columns
+        }
+    }
+}
+
+// Remove floats
+@media @landscape-phone-to-tablet {
+    .span9,
+    .span12 {
+        &.img-right,
+        &.img-left { 
+            .widget-content { float: none; }
+        }
+    }
+}
+
+// .widget-actions positioning
+.span9,
+.span12 {
+    &.img-left { 
+        .widget-actions { right: 0; }
+    }
+    &.img-right { 
+        .widget-actions { left: 0; }
+    }
+}
+
+// remove positioning
+@media @landscape-phone-to-tablet {
+    .span9,
+    .span12 {
+        &.img-left { 
+            .widget-actions { right: auto; }
+        }
+        &.img-right { 
+            .widget-actions { left: auto; }
+        }
+    }
+}
+
+/* Responsive content widths and padding
+   ========================================================================== */
+
+/* Padding */
+
+.bg-fill {
+    .widget-content {
+        .h4, p {
+            padding-right: @gridGutterWidth;
+            padding-left: @gridGutterWidth;
+        }
+    }
+}
+
+// Large desktop and up
+@media @large-desktop-and-up {
+    .bg-fill {
+        .widget-content {
+            .h4, p {
+                padding-right: @gridGutterWidth1200;
+                padding-left: @gridGutterWidth1200;
+            }
+        }
+    }
+}
+
+/* .span9 */
+
+// Default (desktop)
+.span9 {
+    &.bg-fill {
+        &.img-left {
+            .h4, p { padding-left: 0; }
+        }
+        &.img-right {
+            .h4, p { padding-right: 0; }
+        }
+    }
+}
+
+// Large desktop and up
+@media @large-desktop-and-up {
+    .span9 {
+        &.bg-fill {
+            &.img-left {
+                .h4, p { padding-left: 0; }
+            }
+            &.img-right {
+                .h4, p { padding-right: 0; }
+            }
+        }
+    }
+}
+
+/* .span12 */
+
+// Default (desktop)
+.span12 {
+    &.bg-fill {
+        &.img-left {
+            .h4, p { padding-left: 0; }
+        }
+        &.img-right {
+            .h4, p { padding-right: 0; }
+        }
+    }
+}
+
+// Large desktop and up
+@media @large-desktop-and-up {
+    .span12 {
+        &.bg-fill {
+            &.img-left {
+                .h4, p { padding-left: 0; }
+            }
+            &.img-right {
+                .h4, p { padding-right: 0; }
+            }
+        }
+    }
+}
+
+/* Widths */
+
+/* .span9 */
+
+// Default (desktop)
+.span9 {
+    &[class*="img-"] {
+        .widget-content,
+        .widget-actions { width: 48.57142857142857%; }
+    }
+}
+
+// Large desktop and up
+@media @large-desktop-and-up {
+    .span9 {
+        &[class*="img-"] {
+            .widget-content,
+            .widget-actions { width: 48.27586206896552%; }
+        }
+    }
+}
+
+// Tablet to desktop
+@media @tablet-to-desktop {
+    .span9 {
+        &[class*="img-"] {
+            .widget-content,
+            .widget-actions { width: 48.14126394052045%; }
+        }
+    }
+}
+
+// Landscape phone to desktop/tablet
+@media @landscape-phone-to-tablet {
+    .span9 {
+        &[class*="img-"] {
+            .widget-content,
+            .widget-actions { width: 100%; }
+        }
+    }
+}
+
+/* .span12 */
+
+// Default (desktop)
+.span12 {
+    &[class*="img-"] {
+        .widget-content,
+        .widget-actions { width: 48.93617021276596%; }
+    }
+}
+
+// Large desktop and up
+@media @large-desktop-and-up {
+    .span12 {
+        &[class*="img-"] {
+            .widget-content,
+            .widget-actions { width: 48.71794871794872%; }
+        }
+    }
+}
+
+// Tablet to desktop
+@media @tablet-to-desktop {
+    .span12 {
+        &[class*="img-"] {
+            .widget-content,
+            .widget-actions { width: 48.61878453038674%; }
+        }
+    }
+}
+
+// Landscape phone to desktop/tablet
+@media @landscape-phone-to-tablet {
+    .span12 {
+        &[class*="img-"] {
+            .widget-content,
+            .widget-actions { width: 100%; }
+        }
+    }
+}
