@@ -40,6 +40,15 @@ class FooterLogo extends DataObject
             new LiteralField('LinkWrapEnd', '</div></div>'),
         ));
 
+        $fields->addFieldToTab(
+            "Root.Main",
+            $ImageUpload = new UploadField(
+                'Image',
+                'Logo'
+            )
+        );
+        $ImageUpload->setFolderName('Uploads/Logos');
+
         return $fields;
     }
 

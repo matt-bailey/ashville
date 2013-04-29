@@ -24,6 +24,12 @@ class ServicesSlide extends DataObject
         $fields->removeByName('ExternalLink');
         $fields->removeByName('LinkType');
 
+        $fields->addFieldToTab(
+            "Root.Main",
+            $ImageUpload = new UploadField('Image', 'Services')
+        );
+        $ImageUpload->setFolderName('Uploads/Services');
+
         $fields->addFieldsToTab('Root.Main', array(
             /*new DropdownField(
                 'CarouselPosition',

@@ -15,11 +15,11 @@ class Page extends SiteTree
     );
 
     static $many_many = array(
-        'SlideItems' => 'SlideItem'
+        'Slides' => 'Slide'
     );
     
     static $many_many_extraFields = array(
-        'SlideItems' => array(
+        'Slides' => array(
             'SortID' => 'Int'
         )
     );
@@ -84,13 +84,13 @@ class Page extends SiteTree
         {
             $config = GridFieldConfig_RecordEditor::create();
             $config->addComponent(new GridFieldSortableRows('SortID'));
-            $slideItemsField = new GridField(
-                'SlideItems',
-                'Slide Items',
-                $this->owner->SlideItems(),
+            $slidesField = new GridField(
+                'Slides',
+                'Slides',
+                $this->owner->Slides(),
                 $config
             );      
-            $fields->addFieldToTab('Root.SlideShow', $slideItemsField);
+            $fields->addFieldToTab('Root.SlideShow', $slidesField);
         }
 
         return $fields;

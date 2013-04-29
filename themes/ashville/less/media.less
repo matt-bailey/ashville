@@ -1,0 +1,50 @@
+/**
+ * Media
+ */
+
+/* ==========================================================================
+   Bootstrap overrides
+   ========================================================================== */
+
+// Proper spacing between instances of .media
+.media,
+.media .media {
+    margin-top: 0;
+    margin-bottom: @baseLineHeight * 1.5;
+}
+
+/* ==========================================================================
+   Floorplan
+   ========================================================================== */
+
+.media-floorplan {
+    .media-object {
+        position: relative;
+        z-index: 2;
+        width: 47.701149425287355%;
+        max-width: 767px;
+        float: left;
+        min-height: 1px; // prevent collapsing columns
+        margin-right: 30px;
+    }
+}
+
+.media-floorplan {
+    .media-body {
+        position: relative;
+        z-index: 1;
+        p:last-child { margin-bottom: 0; }
+    }
+}
+
+// Media queries
+@media @landscape-phone-to-tablet {
+    .media-floorplan {
+        .media-object {
+            width: 100%;
+            float: none;
+            margin-right: 0;
+            margin-bottom: @baseLineHeight * 1.5;
+        }
+    }
+}

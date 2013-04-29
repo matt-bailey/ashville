@@ -1,6 +1,6 @@
 <?php
 
-class SlideItem extends DataObject
+class Slide extends DataObject
 {
     static $db = array(
         'Title' => 'Varchar(255)',
@@ -16,6 +16,13 @@ class SlideItem extends DataObject
     );
 	
     static $default_sort = 'SortID';
+
+    // Set default values
+    public function populateDefaults()
+    {
+        parent::populateDefaults();
+        $this->SlideCaptionPosition = 'bottom';
+    }
     
     public function getCMSFields()
     {
@@ -23,6 +30,12 @@ class SlideItem extends DataObject
         $fields->removeByName('InternalLink');
         $fields->removeByName('ExternalLink');
         $fields->removeByName('LinkType');
+
+        $fields->addFieldToTab(
+            "Root.Main",
+            $ImageUpload = new UploadField('Image', 'Slide')
+        );
+        $ImageUpload->setFolderName('Uploads/Slides');
 
         $fields->addFieldsToTab('Root.Main', array( 
             new LiteralField('LinkWrapStart', '<div class="field"><label class="left">Link</label><div class="middleColumn">'),

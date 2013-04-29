@@ -19,6 +19,7 @@
                 <h1>$Title</h1>
             </header>
             <section class="content">$Content</section>
+            <% include FloorPlans %>
         </article>
         $Form
         $PageComments

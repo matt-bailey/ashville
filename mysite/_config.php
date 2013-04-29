@@ -47,10 +47,11 @@ DataObject::add_extension('BlogEntry', 'BlogEntryDecorator');
 
 // Add additional admin css
 LeftAndMain::require_css('mysite/fancybox/jquery.fancybox.css');
+LeftAndMain::require_css('mysite/imgareaselect/css/imgareaselect-animated.css');
 LeftAndMain::require_css('mysite/css/admin.css');
 
 // Add additional admin js
 LeftAndMain::require_javascript('mysite/fancybox/lib/jquery.mousewheel-3.0.6.pack.js');
 LeftAndMain::require_javascript('mysite/fancybox/jquery.fancybox.pack.js');
+LeftAndMain::require_javascript('mysite/imgareaselect/scripts/jquery.imgareaselect.pack.js');
 LeftAndMain::require_javascript('mysite/js/admin.min.js');
-

@@ -26,9 +26,18 @@ class HeaderSocialLink extends DataObject
             new ColorField('IconColour', 'Icon Colour'),
             new DropdownField('IconType','Choose Icon Type', singleton('HeaderSocialLink')->dbObject('IconType')->enumValues()),
             new TextField('URL', 'Link URL'),
-            new UploadField('Image', 'Image <br>(optional - only required if Icon Keyword above is not used)'),
+            //new UploadField('Image', 'Image <br>(optional - only required if Icon Keyword above is not used)'),
             new LiteralField('SSSocial', '<div class="field"><label class="left"></label><div class="middleColumn"><a class="fancybox-ajax" href="/mysite/symbolset/ss-social/documentation.html">Click here to view available icons and their keywords</a></div></div>')
         ));
+
+        $fields->addFieldToTab(
+            "Root.Main",
+            $ImageUpload = new UploadField(
+                'Image',
+                'Icon <br>(optional - only required if Icon Keyword above is not used)'
+            )
+        );
+        $ImageUpload->setFolderName('Uploads/Logos');
 
         return $fields;
     }
