@@ -32,7 +32,7 @@ if (class_exists('SiteTree')) SiteTree::enable_nested_urls();
 //FulltextSearchable::enable();
 
 // Better image quality
-GD::set_default_quality(90);
+GD::set_default_quality(95);
 
 Config::inst()->update('BlogCategory', 'limit_to_holder', true);
 

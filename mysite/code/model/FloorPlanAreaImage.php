@@ -18,13 +18,13 @@ class FloorPlanAreaImage extends DataObject
         'Description' => 'Description'
     );
     
-    //static $default_sort = 'SortID';
+    static $default_sort = 'SortID';
     
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
 
-        $floorPlanAreaDropdown = Dataobject::get('FloorPlanArea')->map('ID', 'Title');
+        $floorPlanAreaDropdown = Dataobject::get('FloorPlanArea')->sort('Title')->map('ID', 'Title');
 
         $ImageUpload = new UploadField('Image', 'Image');
         $ImageUpload->setFolderName('Uploads/Casestudies');

@@ -1,15 +1,15 @@
 <div id="hero-slideshow" class="carousel carousel-buttons">
     <div class="carousel-inner">
-        <% loop SlideItems %>
+        <% loop Slides %>
         <article class="item<% if First %> active<% end_if %>">
             <% if Image %>
-            <a href="$Link" title="$Title">
+            <% if Link %><a href="$Link" title="$Title"><% end_if %>
                 $Image.CroppedImage(870,470)
-            </a>
+            <% if Link %></a><% end_if %>
             <% end_if %>
             <div class="carousel-caption<% if SlideCaptionPosition %> position-$SlideCaptionPosition<% end_if %>">
                 <% if Title %>
-                <h4><a href="$Link" title="$Title">$Title</a></h4>
+                <h4><% if Link %><a href="$Link" title="$Title"><% end_if %>$Title<% if Link %></a><% end_if %></h4>
                 <% end_if %>
                 <% if Caption %>
                 <p>$Caption</p>

@@ -11,14 +11,14 @@ class FloorPlanArea extends DataObject
         'Y2' => 'Int'
     );
 
-    //static $default_sort = 'SortID';
+    static $default_sort = 'SortID';
     
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
 
         $linkedFloorPlan = $this->LinkedFloorPlan;
-        $floorPlanDropdown = Dataobject::get('FloorPlan')->map('ID', 'Title');
+        $floorPlanDropdown = Dataobject::get('FloorPlan')->sort('Title')->map('ID', 'Title');
 
         $leftJoinOneTable = 'FloorPlan';
         $leftJoinOne = '"FloorPlan"."ImageID" = "File"."ID"';

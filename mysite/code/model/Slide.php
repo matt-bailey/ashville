@@ -37,7 +37,8 @@ class Slide extends DataObject
         );
         $ImageUpload->setFolderName('Uploads/Slides');
 
-        $fields->addFieldsToTab('Root.Main', array( 
+        $fields->addFieldsToTab('Root.Main', array(
+            new LiteralField('ImgInstructions', '<div><p>Recommended image dimensions 870px x 470px.</p></div>'),
             new LiteralField('LinkWrapStart', '<div class="field"><label class="left">Link</label><div class="middleColumn">'),
             new SelectionGroup(
                 'LinkType',

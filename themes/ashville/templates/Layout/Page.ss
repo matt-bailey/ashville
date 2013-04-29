@@ -1,11 +1,11 @@
 <div class="row">
     <div class="span9">
-        <% if SlideItems %>
+        <% if Slides %>
         <% include Slideshow %>
         <% end_if %>
     </div>
     <div class="span3">
-        <% if SlideItems %>
+        <% if Slides %>
         <% if $SiteConfig.ServicesSlides %>
         <% include ServicesCarousel %>
         <% end_if %>

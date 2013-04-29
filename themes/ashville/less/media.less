@@ -17,7 +17,8 @@
    Floorplan
    ========================================================================== */
 
-.media-floorplan {
+.media-floorplan,
+.media-cs-teaser {
     .media-object {
         position: relative;
         z-index: 2;
@@ -29,17 +30,23 @@
     }
 }
 
-.media-floorplan {
+.media-floorplan,
+.media-cs-teaser {
     .media-body {
         position: relative;
         z-index: 1;
+    }
+}
+.media-floorplan {
+    .media-body {
         p:last-child { margin-bottom: 0; }
     }
 }
 
 // Media queries
 @media @landscape-phone-to-tablet {
-    .media-floorplan {
+    .media-floorplan,
+    .media-cs-teaser {
         .media-object {
             width: 100%;
             float: none;

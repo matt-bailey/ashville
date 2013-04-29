@@ -8,17 +8,17 @@ class CaseStudyPage extends Page
         'FloorPlanAreaImages' => 'FloorPlanAreaImage'
     );
 
-    /*static $many_many_extraFields = array(
+    static $many_many_extraFields = array(
         'FloorPlans' => array(
             'SortID' => 'Int'
         ),
-        // 'FloorPlanAreas' => array(
-        //     'SortID' => 'Int'
-        // ),
+        'FloorPlanAreas' => array(
+            'SortID' => 'Int'
+        ),
         'FloorPlanAreaImages' => array(
             'SortID' => 'Int'
         )
-    );*/
+    );
 
     public function getCMSFields()
     {
@@ -32,7 +32,7 @@ class CaseStudyPage extends Page
          * Floor plans
          */
         $config = GridFieldConfig_RecordEditor::create();
-        //$config->addComponent(new GridFieldSortableRows('SortID'));
+        $config->addComponent(new GridFieldSortableRows('SortID'));
         $floorPlansField = new GridField(
             'FloorPlans',
             'Floor Plans',
@@ -45,7 +45,7 @@ class CaseStudyPage extends Page
          * Floor plan areas
          */
         $config = GridFieldConfig_RecordEditor::create();
-        //$config->addComponent(new GridFieldSortableRows('SortID'));
+        $config->addComponent(new GridFieldSortableRows('SortID'));
         $floorPlanAreasField = new GridField(
             'FloorPlanAreas',
             'Floor Plan Areas',
@@ -58,7 +58,7 @@ class CaseStudyPage extends Page
          * Floor plan area images
          */
         $config = GridFieldConfig_RecordEditor::create();
-        //$config->addComponent(new GridFieldSortableRows('SortID'));
+        $config->addComponent(new GridFieldSortableRows('SortID'));
         $floorPlanAreaImagesField = new GridField(
             'FloorPlanAreaImages',
             'Floor Plan Area Images',

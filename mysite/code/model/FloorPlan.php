@@ -17,7 +17,7 @@ class FloorPlan extends DataObject
         'Description' => 'Description'
     );
 
-    //static $default_sort = 'SortID';
+    static $default_sort = 'SortID';
     
     public function getCMSFields()
     {

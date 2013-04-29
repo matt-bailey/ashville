@@ -517,6 +517,19 @@
       "outputAbbreviatedPath" : "\/bootstrap\/js\/bootstrap-carousel.min.js",
       "fileType" : 64
     },
+    "\/less\/carousel.less" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/less\/carousel.less",
+      "outputStyle" : 1,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/carousel.css",
+      "strictImports" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
     "\/bootstrap\/less\/wells.less" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -556,16 +569,18 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/bootstrap\/js\/bootstrap-collapse.js" : {
+    "\/less\/editor.less" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bootstrap\/js\/bootstrap-collapse.js",
+      "inputAbbreviatedPath" : "\/less\/editor.less",
       "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/bootstrap\/js\/bootstrap-collapse.min.js",
-      "fileType" : 64
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/editor.css",
+      "strictImports" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/less\/typography.less" : {
       "ignoreWasSetByUser" : 0,
@@ -580,18 +595,16 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/less\/editor.less" : {
+    "\/bootstrap\/js\/bootstrap-collapse.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/less\/editor.less",
+      "inputAbbreviatedPath" : "\/bootstrap\/js\/bootstrap-collapse.js",
       "outputStyle" : 1,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/editor.css",
-      "strictImports" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/bootstrap\/js\/bootstrap-collapse.min.js",
+      "fileType" : 64
     },
     "\/bootstrap\/js\/bootstrap-popover.js" : {
       "ignoreWasSetByUser" : 0,
@@ -798,18 +811,16 @@
       "outputAbbreviatedPath" : "\/js\/ss-social.min.min.js",
       "fileType" : 64
     },
-    "\/bootstrap\/less\/utilities.less" : {
+    "\/bootstrap\/js\/bootstrap-modal.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bootstrap\/less\/utilities.less",
+      "inputAbbreviatedPath" : "\/bootstrap\/js\/bootstrap-modal.js",
       "outputStyle" : 1,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/bootstrap\/css\/utilities.css",
-      "strictImports" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/bootstrap\/js\/bootstrap-modal.min.js",
+      "fileType" : 64
     },
     "\/less\/grid.less" : {
       "ignoreWasSetByUser" : 0,
@@ -861,14 +872,16 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/css\/form.css" : {
+    "\/js\/jquery-1.9.1.min.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/form.css",
-      "outputAbbreviatedPath" : "\/No Output Path",
-      "fileType" : 16
+      "inputAbbreviatedPath" : "\/js\/jquery-1.9.1.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/jquery-1.9.1.min.min.js",
+      "fileType" : 64
     },
     "\/bootstrap\/less\/responsive.less" : {
       "ignoreWasSetByUser" : 0,
@@ -894,16 +907,14 @@
       "outputAbbreviatedPath" : "\/bootstrap\/js\/bootstrap-affix.min.js",
       "fileType" : 64
     },
-    "\/js\/jquery-1.9.1.min.js" : {
+    "\/css\/form.css" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery-1.9.1.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jquery-1.9.1.min.min.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/css\/form.css",
+      "outputAbbreviatedPath" : "\/No Output Path",
+      "fileType" : 16
     },
     "\/bootstrap\/js\/bootstrap-tooltip.js" : {
       "ignoreWasSetByUser" : 0,
@@ -916,16 +927,18 @@
       "outputAbbreviatedPath" : "\/bootstrap\/js\/bootstrap-tooltip.min.js",
       "fileType" : 64
     },
-    "\/bootstrap\/js\/bootstrap-modal.js" : {
+    "\/bootstrap\/less\/utilities.less" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bootstrap\/js\/bootstrap-modal.js",
+      "inputAbbreviatedPath" : "\/bootstrap\/less\/utilities.less",
       "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/bootstrap\/js\/bootstrap-modal.min.js",
-      "fileType" : 64
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/bootstrap\/css\/utilities.css",
+      "strictImports" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/css\/layout.css" : {
       "ignoreWasSetByUser" : 0,
@@ -1017,16 +1030,18 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/js\/main.js" : {
+    "\/bootstrap\/less\/variables.less" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/main.js",
+      "inputAbbreviatedPath" : "\/bootstrap\/less\/variables.less",
       "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/main.min.js",
-      "fileType" : 64
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/bootstrap\/css\/variables.css",
+      "strictImports" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/bootstrap\/less\/component-animations.less" : {
       "ignoreWasSetByUser" : 0,
@@ -1091,18 +1106,16 @@
       "outputAbbreviatedPath" : "\/js\/ss-standard.min.js",
       "fileType" : 64
     },
-    "\/bootstrap\/less\/variables.less" : {
+    "\/js\/main.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bootstrap\/less\/variables.less",
+      "inputAbbreviatedPath" : "\/js\/main.js",
       "outputStyle" : 1,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/bootstrap\/css\/variables.css",
-      "strictImports" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/main.min.js",
+      "fileType" : 64
     },
     "\/bootstrap\/less\/sprites.less" : {
       "ignoreWasSetByUser" : 0,
