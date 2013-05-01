@@ -49,7 +49,7 @@ class FloorPlanAreaImage extends DataObject
 
         return new FieldList(
             new TextField('Title', 'Image name'),
-            new TextareaField('Description', 'Image caption<br>(HTML allowed)'),
+            new HtmlEditorField('Description', 'Image caption'),
             new DropdownField('LinkedFloorPlanArea', 'Choose a floor plan area', $floorPlanAreaDropdown,'','',''),
             $ImageUpload
         );

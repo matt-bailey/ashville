@@ -2,6 +2,7 @@
 .clearfix:after{clear:both;}
 .hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;}
 .input-block-level{display:block;width:100%;min-height:30px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.horizontal-rule hr{border-top-width:2px;border-bottom-width:2px;border-color:#292929;}
 body{margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;color:#ffffff;background-color:#333333;}
 a{color:#ffffff;text-decoration:none;}
 a:hover,a:focus{color:#d9d9d9;text-decoration:underline;}
@@ -65,4 +66,5 @@ a:hover,a:focus{color:#d9d9d9;text-decoration:underline;}
 .typography address{display:block;margin-bottom:20px;font-style:normal;line-height:20px;}
 .typography p{margin:0 0 20px;}
 .typography h1,.typography h2,.typography h3,.typography h4,.typography h5,.typography h6{margin:0 0 20px;}
+.typography hr{border-top-width:2px;border-bottom-width:2px;border-color:#292929;}
 hr{border-top-width:2px;border-bottom-width:2px;border-color:#292929;}

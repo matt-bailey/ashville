@@ -5,3 +5,5 @@
 .WidgetAreaEditor{*zoom:1;}
 .widgetFields .SelectionGroup{display:block;border-bottom:1px solid rgba(201, 205, 206, 0.8);-webkit-box-shadow:0 1px 0 rgba(244, 245, 245, 0.8);-moz-box-shadow:0 1px 0 rgba(244, 245, 245, 0.8);box-shadow:0 1px 0 rgba(244, 245, 245, 0.8);padding:0 0 7px 0;margin:0 0 8px 0;}.widgetFields .SelectionGroup li{float:none;}
 #Form_ItemEditForm #floorplan{width:767px;height:auto;}
+#Form_ItemEditForm_Description,#Form_ItemEditForm_Description_tbl{height:180px !important;}
+#Form_ItemEditForm_Description_ifr{height:auto !important;}

@@ -129,15 +129,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/imgareaselect\/css\/imgareaselect-deprecated.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/imgareaselect\/css\/imgareaselect-deprecated.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/fancybox\/helpers\/jquery.fancybox-buttons.less" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -150,6 +141,15 @@
       "strictImports" : 0,
       "fileType" : 1,
       "debugStyle" : 0
+    },
+    "\/imgareaselect\/css\/imgareaselect-deprecated.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/imgareaselect\/css\/imgareaselect-deprecated.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/fancybox\/helpers\/jquery.fancybox-buttons.css" : {
       "ignoreWasSetByUser" : 0,

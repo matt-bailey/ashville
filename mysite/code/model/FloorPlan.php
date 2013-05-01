@@ -28,7 +28,7 @@ class FloorPlan extends DataObject
 
         return new FieldList(
             new TextField('Title', 'Floor plan name'),
-            new TextareaField('Description', 'Description<br>(HTML Allowed)'),
+            new HtmlEditorField('Description', 'Description'),
             new LiteralField('ImgUploadInstructions', '<div><p>Recommended image width at least 767px.</p></div>'),
             $ImageUpload
         );

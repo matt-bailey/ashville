@@ -31,7 +31,7 @@ function renameWidgetTitle() {
 function hideWidgetAreaType() {
     // I know this is sooo hacky, but at the moment I can't find any other way to remove the
     // widget area type dropdown from widgets in the sidebar widget area
-    jQuery('.FeatureWidget[id*=SidebarWidgetArea]').each(function() {
+    jQuery('.FeatureWidget[id*=SidebarWidgetArea], .VideoWidget[id*=SidebarWidgetArea]').each(function() {
         if (jQuery('.field[id*=WidgetLayoutType]', this)) {
             jQuery('.field[id*=WidgetLayoutType]', this).hide();
         }
@@ -40,7 +40,7 @@ function hideWidgetAreaType() {
 
 // Initialise TinyMCE on textareas
 function initialiseTinyMCE() {
-    // Only do it if the textarea is on the widgets tab
+    // Only initialise TinyMCE certain textareas
     jQuery('#Root_Widgets').exists(function() {
         tinyMCE.init({
             mode: "specific_textareas",

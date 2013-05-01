@@ -37,6 +37,7 @@ class FeatureWidget extends Widget
     public function populateDefaults()
     {
         parent::populateDefaults();
+        // Set WidgetLayoutType to so width defaults to span3 in sidebars
         $this->WidgetLayoutType = 2;
         $this->BackgroundFill = 1;
     }

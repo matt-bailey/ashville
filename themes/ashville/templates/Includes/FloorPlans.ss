@@ -13,7 +13,7 @@
         <h2 class="media-heading hidden-phone">$Title</h2>
         <% end_if %>
         <% if Description %>
-        <p>$Description</p>
+        $Description
         <% end_if %>
     </div>
     <map name="$TitleKey">

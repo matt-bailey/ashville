@@ -10,11 +10,11 @@ class Slide extends DataObject
         'InternalLink' => 'Text',
         'ExternalLink' => 'Text'
     );
-	
+
     static $has_one = array(
         'Image' => 'Image'
     );
-	
+
     static $default_sort = 'SortID';
 
     // Set default values
@@ -23,7 +23,7 @@ class Slide extends DataObject
         parent::populateDefaults();
         $this->SlideCaptionPosition = 'bottom';
     }
-    
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
@@ -67,9 +67,9 @@ class Slide extends DataObject
             return $this->ExternalLink;
         }
     }
-    
+
 	public function getThumbnail()
-    { 
-		return $this->Image()->CMSThumbnail(); 
+    {
+		return $this->Image()->CMSThumbnail();
 	}
 }
