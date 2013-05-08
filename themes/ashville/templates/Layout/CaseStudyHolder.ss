@@ -20,9 +20,9 @@
             </header>
             <section class="content">$Content</section>
         </article>
-        <% loop Children %>
+        <%-- loop Children --%>
         <% include CaseStudyTeaser %>
-        <% end_loop %>
+        <%-- end_loop --%>
         $Form
         $PageComments
     </div>
