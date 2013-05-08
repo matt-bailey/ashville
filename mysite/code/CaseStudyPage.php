@@ -2,10 +2,13 @@
 
 class CaseStudyPage extends Page
 {
+    static $description = 'Case study page';
+
     static $many_many = array(
         'FloorPlans' => 'FloorPlan',
         'FloorPlanAreas' => 'FloorPlanArea',
-        'FloorPlanAreaImages' => 'FloorPlanAreaImage'
+        'FloorPlanAreaImages' => 'FloorPlanAreaImage',
+        'CaseStudyCategories' => 'CaseStudyCategory'
     );
 
     static $many_many_extraFields = array(
@@ -66,6 +69,16 @@ class CaseStudyPage extends Page
             $config
         );      
         $fields->addFieldToTab('Root.FloorPlanAreaImages', $floorPlanAreaImagesField);
+
+        /**
+         * Case study categories
+         */
+        $caseStudyCats = DataObject::get("CaseStudyCategory", "CaseStudyHolderID = '" . $this->ParentID . "'");
+        if ($caseStudyCats) {
+            $fields->addFieldToTab("Root.CaseStudyCategories", new HeaderField("Select case study categories", 2));
+            $map = $caseStudyCats->map("ID", "Category");
+            $fields->addFieldToTab("Root.CaseStudyCategories", new CheckboxSetField('CaseStudyCategories', 'Case Study Categories', $map));
+        }
 
         return $fields;
     }
