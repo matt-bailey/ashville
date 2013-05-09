@@ -72,7 +72,7 @@ class CustomSiteConfig extends DataExtension
             $this->owner->HeaderLinks(),
             $config
         );      
-        $fields->addFieldToTab('Root.Global.Header.CustomerService', $headerLinksField);
+        $fields->addFieldToTab('Root.HeaderLinks.Header.CustomerService', $headerLinksField);
 
         /**
          * Header social links
@@ -85,7 +85,7 @@ class CustomSiteConfig extends DataExtension
             $this->owner->HeaderSocialLinks(),
             $config
         );      
-        $fields->addFieldToTab('Root.Global.Header.CustomerService', $headerSocialLinksField);
+        $fields->addFieldToTab('Root.HeaderSocialLinks.Header.CustomerService', $headerSocialLinksField);
 
         /**
          * Services slides
@@ -98,7 +98,7 @@ class CustomSiteConfig extends DataExtension
             $this->owner->ServicesSlides(),
             $config
         );      
-        $fields->addFieldToTab('Root.Global.Header.CustomerService', $ServicesSlidesField);
+        $fields->addFieldToTab('Root.ServicesSlides.Header.CustomerService', $ServicesSlidesField);
 
         /**
          * Services carousel position
@@ -124,7 +124,7 @@ class CustomSiteConfig extends DataExtension
             $this->owner->FooterButtons(),
             $config
         );      
-        $fields->addFieldToTab('Root.Global.Header.CustomerService', $footerButtonsField);
+        $fields->addFieldToTab('Root.FooterButtons.Header.CustomerService', $footerButtonsField);
 
         /**
          * Footer logos
@@ -137,7 +137,7 @@ class CustomSiteConfig extends DataExtension
             $this->owner->FooterLogos(),
             $config
         );      
-        $fields->addFieldToTab('Root.Global.Header.CustomerService', $footerLogosField);
+        $fields->addFieldToTab('Root.FooterLogos.Header.CustomerService', $footerLogosField);
 
         return $fields;
     }
