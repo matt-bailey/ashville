@@ -23,6 +23,11 @@ class CaseStudyPage extends Page
         )
     );
 
+    static $defaults = array ( 
+        'ShowInMenus' => false, 
+        'ShowInSearch' => false 
+    );
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();

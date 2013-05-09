@@ -3,3 +3,4 @@ _ss_environment.php
 silverstripe-cache
 .DS_Store
 composer.lock
+codekit-config.json
