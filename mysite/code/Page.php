@@ -11,7 +11,8 @@ class Page extends SiteTree
 
     static $has_one = array(
         "MainContentWidgetArea" => "WidgetArea",
-        "SidebarWidgetArea" => "WidgetArea"
+        "SidebarWidgetArea" => "WidgetArea",
+        //'MenuCallout' => 'Image'
     );
 
     static $many_many = array(
@@ -93,8 +94,35 @@ class Page extends SiteTree
             $fields->addFieldToTab('Root.SlideShow', $slidesField);
         }
 
+        /**
+         * Menu callout
+         */
+        // Don't show tab on Blog page types
+        // if($this->ClassName != 'BlogHolder' && $this->ClassName != 'BlogEntry' && $this->ClassName != 'BlogTree')
+        // {
+        //     // Only show tab on top level pages
+        //     if($this->ParentID == 0)
+        //     {
+        //         $fields->addFieldToTab(
+        //             "Root.MenuCallout",
+        //             $ImageUpload = new UploadField(
+        //                 'MenuCallout',
+        //                 'Menu Callout <br><span style="font-weight:normal;">(shown on the main navigation dropdown menu)</span>'
+        //             )
+        //         );
+        //         $ImageUpload->setFolderName('Uploads/Menucallouts');
+        //     }
+        // }
+
         return $fields;
     }
+
+    /**
+     * Get menu callout image
+     */
+    // function getMenuCalloutImage() { 
+    //     return $this->MenuCallout();
+    // }
 
     /**
      * Auto inherit widgets
