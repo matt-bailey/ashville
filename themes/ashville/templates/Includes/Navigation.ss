@@ -1,3 +1,10 @@
+<style>
+<% loop $Menu(1) %>
+.nav .{$Title.StringToKey} {
+    background-image: url('/images/{$Title.StringToKey}.jpg');
+}
+<% end_loop %>
+</style>
 <div class="container">
     <nav role="navigation">
         <a class="brand" href="$BaseHref" rel="home">$SiteConfig.Title</a>

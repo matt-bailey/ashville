@@ -8,15 +8,15 @@ class StringToKey extends Extension
      */
     public function StringToKey()
     {
-        $title = $this->owner->value;
+        if (!$this->owner instanceof Varchar) {
+            return false;
+        }
 
-        if ($title != null)
-        {
+        $title = $this->owner->value;
+        if ($title != null) {
             return $this->convertString($title);
             // var_dump($this->convertString($title));
-        }
-        else
-        {
+        } else {
             return false;
         }
     }
