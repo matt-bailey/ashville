@@ -6,7 +6,7 @@
             <li class="$LinkingMode<% if FirstLast %> $FirstLast<% end_if %>">
                 <a href="$Link" title="$Title.XML">$MenuTitle.XML</a>
                 <% if Children %>
-                <ul class="submenu">
+                <ul class="submenu $Title.StringToKey">
                     <% loop Children %>
                     <li class="$LinkingMode<% if FirstLast %> $FirstLast<% end_if %>">
                         <a href="$Link" title="$Title.XML">$MenuTitle.XML</a>
