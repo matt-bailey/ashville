@@ -6,20 +6,20 @@ class StringToKey extends Extension
      *
      * @return string
      */
-    public function StringToKey()
-    {
-        if (!$this->owner instanceof Varchar) {
-            return false;
-        }
-
-        $title = $this->owner->value;
-        if ($title != null) {
-            return $this->convertString($title);
-            // var_dump($this->convertString($title));
-        } else {
-            return false;
-        }
+public function StringToKey()
+{
+    if (!$this->owner instanceof Varchar) {
+        return false;
     }
+
+    $title = $this->owner->value;
+    if ($title != null) {
+        return $this->convertString($title);
+        // var_dump($this->convertString($title));
+    } else {
+        return false;
+    }
+}
 
     /**
      * Convert string to lowercase and replace spaces with hyphens

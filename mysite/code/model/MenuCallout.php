@@ -11,6 +11,7 @@ class MenuCallout extends DataObject
     );
 
     public static $summary_fields = array(
+        'Thumbnail' => 'Thumbnail',
         'MenuItem' => 'MenuItem'
     );
 	
@@ -38,6 +39,8 @@ class MenuCallout extends DataObject
             // )
 
         ));
+
+        $menuItem = $this->MenuItem;
 
         $fields->addFieldToTab(
             "Root.Main",

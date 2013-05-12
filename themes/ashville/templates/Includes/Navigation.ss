@@ -1,9 +1,12 @@
 <style>
-<% loop $Menu(1) %>
-.nav .{$Title.StringToKey} {
-    background-image: url('/images/{$Title.StringToKey}.jpg');
+<% if SiteConfig.MenuCallouts %>
+<% loop SiteConfig.MenuCallouts %>
+nav .$MenuItem {
+    background-image: url('$Image.URL');
+    background-repeat: no-repeat;
 }
 <% end_loop %>
+<% end_if %>
 </style>
 <div class="container">
     <nav role="navigation">
