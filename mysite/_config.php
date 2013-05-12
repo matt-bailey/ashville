@@ -41,6 +41,9 @@ Object::add_extension('SiteConfig', 'CustomSiteConfig');
 CMSMenu::remove_menu_item('CMSSettingsController');
 CMSMenu::add_menu_item('CustomCMSSettingsController', 'Settings', 'admin/settings/');
 
+// Add the extension StringToKey to StringField
+Object::add_extension("StringField", "StringToKey");
+
 // Decorate the Blog page types
 DataObject::add_extension('BlogHolder', 'BlogHolderDecorator');
 DataObject::add_extension('BlogEntry', 'BlogEntryDecorator');

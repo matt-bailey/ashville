@@ -12,7 +12,7 @@ class FloorPlan extends DataObject
     );
 
     public static $summary_fields = array(
-        'Thumbnail'=>'Thumbnail',
+        'Thumbnail' => 'Thumbnail',
         'Title' => 'Title',
         'Description' => 'Description'
     );
@@ -24,7 +24,7 @@ class FloorPlan extends DataObject
         $fields = parent::getCMSFields();
 
         $ImageUpload = new UploadField('Image', 'Floor plan');
-        $ImageUpload->setFolderName('Uploads/Floorplans');
+        $ImageUpload->setFolderName('Uploads/FloorPlans');
 
         return new FieldList(
             new TextField('Title', 'Floor plan name'),

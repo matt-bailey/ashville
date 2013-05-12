@@ -17,7 +17,8 @@ class CustomSiteConfig extends DataExtension
         'HeaderSocialLinks' => 'HeaderSocialLink',
         'ServicesSlides' => 'ServicesSlide',
         'FooterButtons' => 'FooterButton',
-        'FooterLogos' => 'FooterLogo'
+        'FooterLogos' => 'FooterLogo',
+        'MenuCallouts' => 'MenuCallout'
     );    
     
     static $many_many_extraFields = array(
@@ -34,6 +35,9 @@ class CustomSiteConfig extends DataExtension
             'SortID' => 'Int'
         ),
         'FooterLogos' => array(
+            'SortID' => 'Int'
+        ),
+        'MenuCallouts' => array(
             'SortID' => 'Int'
         )
     );
@@ -138,6 +142,19 @@ class CustomSiteConfig extends DataExtension
             $config
         );      
         $fields->addFieldToTab('Root.FooterLogos.Header.CustomerService', $footerLogosField);
+
+        /**
+         * Menu callouts
+         */
+        $config = GridFieldConfig_RecordEditor::create();
+        $config->addComponent(new GridFieldSortableRows('SortID'));
+        $menuCalloutsField = new GridField(
+            'MenuCallouts',
+            'Menu Callouts',
+            $this->owner->MenuCallouts(),
+            $config
+        );      
+        $fields->addFieldToTab('Root.MenuCallouts.Header.CustomerService', $menuCalloutsField);
 
         return $fields;
     }

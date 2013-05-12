@@ -13,6 +13,11 @@ class ServicesSlide extends DataObject
     static $has_one = array(
         'Image' => 'Image'
     );
+
+    public static $summary_fields = array(
+        'Thumbnail' => 'Thumbnail',
+        'Title' => 'Title'
+    );
 	
     static $default_sort = 'SortID';
     

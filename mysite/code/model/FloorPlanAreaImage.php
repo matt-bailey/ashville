@@ -27,7 +27,7 @@ class FloorPlanAreaImage extends DataObject
         $floorPlanAreaDropdown = Dataobject::get('FloorPlanArea')->sort('Title')->map('ID', 'Title');
 
         $ImageUpload = new UploadField('Image', 'Image');
-        $ImageUpload->setFolderName('Uploads/Casestudies');
+        $ImageUpload->setFolderName('Uploads/CaseStudies');
 
         /*
         $leftJoinOneTable = 'FloorPlanAreaImage';
