@@ -15,6 +15,11 @@ class Slide extends DataObject
         'Image' => 'Image'
     );
 
+    public static $summary_fields = array(
+        'Thumbnail' => 'Thumbnail',
+        'Title' => 'Title'
+    );
+
     static $default_sort = 'SortID';
 
     // Set default values

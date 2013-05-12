@@ -14,6 +14,8 @@ class CaseStudyHolder extends Page
 
     static $allowed_children = array('CaseStudyPage');
 
+    static $icon = 'mysite/images/icons/casestudyicon';
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();

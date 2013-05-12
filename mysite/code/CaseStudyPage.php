@@ -28,6 +28,8 @@ class CaseStudyPage extends Page
         'ShowInSearch' => false 
     );
 
+    static $icon = 'mysite/images/icons/casestudyicon';
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
