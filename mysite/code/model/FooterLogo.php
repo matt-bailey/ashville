@@ -12,6 +12,11 @@ class FooterLogo extends DataObject
     static $has_one = array(
         'Image' => 'Image'
     );
+
+    public static $summary_fields = array(
+        'Thumbnail' => 'Thumbnail',
+        'Description' => 'Description'
+    );
 	
     static $default_sort = 'SortID';
     

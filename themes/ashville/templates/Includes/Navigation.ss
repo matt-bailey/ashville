@@ -1,3 +1,13 @@
+<style>
+<% if SiteConfig.MenuCallouts %>
+<% loop SiteConfig.MenuCallouts %>
+nav .$MenuItem {
+    background-image: url('$Image.URL');
+    background-repeat: no-repeat;
+}
+<% end_loop %>
+<% end_if %>
+</style>
 <div class="container">
     <nav role="navigation">
         <a class="brand" href="$BaseHref" rel="home">$SiteConfig.Title</a>
@@ -6,7 +16,7 @@
             <li class="$LinkingMode<% if FirstLast %> $FirstLast<% end_if %>">
                 <a href="$Link" title="$Title.XML">$MenuTitle.XML</a>
                 <% if Children %>
-                <ul class="submenu">
+                <ul class="submenu $Title.StringToKey">
                     <% loop Children %>
                     <li class="$LinkingMode<% if FirstLast %> $FirstLast<% end_if %>">
                         <a href="$Link" title="$Title.XML">$MenuTitle.XML</a>
