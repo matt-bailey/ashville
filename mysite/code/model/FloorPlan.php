@@ -27,12 +27,24 @@ class FloorPlan extends DataObject
         $ImageUpload = new UploadField('Image', 'Floor plan');
         $ImageUpload->setFolderName('Uploads/FloorPlans');
 
+        // Get current subsite
+        $subsite = Subsite::currentSubsite();
+        $subsiteID = '';
+        // Check if subsiteID is set (it won't be on the main site)
+        if ($subsite instanceof Subsite) {
+            $subsiteID = $subsite->getField('ID');
+        } else {
+            $subsiteID = '0';
+        }
+        // Set the subsiteID HiddenField
+        $subsiteField = new HiddenField('SubsiteID', 'Subsite ID', $subsiteID);
+
         return new FieldList(
             new TextField('Title', 'Floor plan name'),
             new HtmlEditorField('Description', 'Description'),
             new LiteralField('ImgUploadInstructions', '<div><p>Recommended image width at least 767px.</p></div>'),
             $ImageUpload,
-            new HiddenField('SubsiteID', 'Subsite ID', Subsite::currentSubsite()->ID)
+            $subsiteField
         );
     }
 

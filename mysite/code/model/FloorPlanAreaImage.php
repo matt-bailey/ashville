@@ -24,7 +24,15 @@ class FloorPlanAreaImage extends DataObject
     {
         $fields = parent::getCMSFields();
 
-        $subsiteID = Subsite::currentSubsite()->ID;
+        // Get current subsite
+        $subsite = Subsite::currentSubsite();
+        $subsiteID = '';
+        // Check if subsiteID is set (it won't be on the main site)
+        if ($subsite instanceof Subsite) {
+            $subsiteID = $subsite->getField('ID');
+        } else {
+            $subsiteID = '0';
+        }
 
         $floorPlanAreaDropdown = Dataobject::get('FloorPlanArea')
             ->where('SubsiteID = ' . $subsiteID)
