@@ -4,7 +4,8 @@ class FloorPlan extends DataObject
 {
     static $db = array(
         'Title' => 'Varchar(255)',
-        'Description' => 'HTMLText'
+        'Description' => 'HTMLText',
+        "SubsiteID" => "Int"
     );
 	
     static $has_one = array(
@@ -30,7 +31,8 @@ class FloorPlan extends DataObject
             new TextField('Title', 'Floor plan name'),
             new HtmlEditorField('Description', 'Description'),
             new LiteralField('ImgUploadInstructions', '<div><p>Recommended image width at least 767px.</p></div>'),
-            $ImageUpload
+            $ImageUpload,
+            new HiddenField('SubsiteID', 'Subsite ID', Subsite::currentSubsite()->ID)
         );
     }
 

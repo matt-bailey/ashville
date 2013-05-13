@@ -24,7 +24,12 @@ class FloorPlanAreaImage extends DataObject
     {
         $fields = parent::getCMSFields();
 
-        $floorPlanAreaDropdown = Dataobject::get('FloorPlanArea')->sort('Title')->map('ID', 'Title');
+        $subsiteID = Subsite::currentSubsite()->ID;
+
+        $floorPlanAreaDropdown = Dataobject::get('FloorPlanArea')
+            ->where('SubsiteID = ' . $subsiteID)
+            ->sort('Title')
+            ->map('ID', 'Title');
 
         $ImageUpload = new UploadField('Image', 'Image');
         $ImageUpload->setFolderName('Uploads/CaseStudies');

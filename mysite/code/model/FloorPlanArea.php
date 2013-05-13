@@ -8,7 +8,8 @@ class FloorPlanArea extends DataObject
         'X1' => 'Int',
         'Y1' => 'Int',
         'X2' => 'Int',
-        'Y2' => 'Int'
+        'Y2' => 'Int',
+        "SubsiteID" => "Int"
     );
 
     static $default_sort = 'SortID';
@@ -17,8 +18,13 @@ class FloorPlanArea extends DataObject
     {
         $fields = parent::getCMSFields();
 
+        $subsiteID = Subsite::currentSubsite()->ID;
+
         $linkedFloorPlan = $this->LinkedFloorPlan;
-        $floorPlanDropdown = Dataobject::get('FloorPlan')->sort('Title')->map('ID', 'Title');
+        $floorPlanDropdown = Dataobject::get('FloorPlan')
+            ->where('SubsiteID = ' . $subsiteID)
+            ->sort('Title')
+            ->map('ID', 'Title');
 
         $leftJoinOneTable = 'FloorPlan';
         $leftJoinOne = '"FloorPlan"."ImageID" = "File"."ID"';
@@ -49,7 +55,8 @@ class FloorPlanArea extends DataObject
                 new HiddenField('X1', 'X1'),
                 new HiddenField('Y1', 'Y1'),
                 new HiddenField('X2', 'X2'),
-                new HiddenField('Y2', 'Y2')
+                new HiddenField('Y2', 'Y2'),
+                new HiddenField('SubsiteID', 'Subsite ID', Subsite::currentSubsite()->ID)
             );
         }
         else
@@ -62,7 +69,8 @@ class FloorPlanArea extends DataObject
                 new HiddenField('X1', 'X1'),
                 new HiddenField('Y1', 'Y1'),
                 new HiddenField('X2', 'X2'),
-                new HiddenField('Y2', 'Y2')
+                new HiddenField('Y2', 'Y2'),
+                new HiddenField('SubsiteID', 'Subsite ID', Subsite::currentSubsite()->ID)
             );
         }
     }

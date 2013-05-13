@@ -4,6 +4,10 @@ class CaseStudyPage extends Page
 {
     static $description = 'Case study page';
 
+    static $has_one = array(
+        "Subsite" => "Subsite"
+    );
+
     static $many_many = array(
         'FloorPlans' => 'FloorPlan',
         'FloorPlanAreas' => 'FloorPlanArea',
