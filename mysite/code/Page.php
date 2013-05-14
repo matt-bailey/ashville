@@ -4,9 +4,9 @@ class Page extends SiteTree
     public static $db = array(
         'ContentArea2' => 'HTMLText',
         'ContentArea3' => 'HTMLText',
-        'SlideCaptionPosition' => "Enum('top, bottom')",
-        //'ShowServicesSlides' => "Enum('yes, no')",
-        //'ServicesSlidesPosition' => "Enum('right, below')"
+        // 'SlideCaptionPosition' => "Enum('top, bottom')",
+        // 'ShowServicesSlides' => "Enum('yes, no')",
+        // 'ServicesSlidesPosition' => "Enum('right, below')"
     );
 
     static $has_one = array(
@@ -67,15 +67,15 @@ class Page extends SiteTree
         /**
          * Slide caption position
          */
-        $fields->addFieldsToTab('Root.SlideShow', array(
-            new DropdownField(
-                'SlideCaptionPosition',
-                'Slide Caption Position',
-                $this->owner->dbObject('SlideCaptionPosition')->enumValues(),
-                '',
-                '',
-                'Choose a position')
-        ));
+        // $fields->addFieldsToTab('Root.SlideShow', array(
+        //     new DropdownField(
+        //         'SlideCaptionPosition',
+        //         'Slide Caption Position',
+        //         $this->owner->dbObject('SlideCaptionPosition')->enumValues(),
+        //         '',
+        //         '',
+        //         'Choose a position')
+        // ));
 
         /**
          * Slide items
