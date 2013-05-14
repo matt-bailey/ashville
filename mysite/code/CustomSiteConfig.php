@@ -8,8 +8,12 @@ class CustomSiteConfig extends DataExtension
         'CompanyTelephone' => 'Varchar(255)',
         'CompanyEmail' => 'Varchar(255)',
         'CompanyNumber' => 'Varchar(255)',
-        'CompanyVatNumber' => 'Varchar(255)',
+        'CompanyVatNumber' => 'Varchar(255)'
         //'ServicesSlidesPosition' => "Enum('right, below')"
+    );
+
+    static $has_one = array(
+        'Watermark' => 'Image'
     );
     
     static $many_many = array(
@@ -50,7 +54,7 @@ class CustomSiteConfig extends DataExtension
         // Capitalise 'title'
         $fields->removeByName('Title');
         $fields->addFieldToTab('Root.Main', new Textfield('Title', 'Site Title'), 'Tagline');
-        
+
         /**
          * Company site globals
          */
@@ -155,6 +159,13 @@ class CustomSiteConfig extends DataExtension
             $config
         );      
         $fields->addFieldToTab('Root.MenuCallouts.Header.CustomerService', $menuCalloutsField);
+
+        /**
+         * Watermark
+         */
+        $WatermarkUpload = new UploadField('Watermark', 'Watermark');
+        $WatermarkUpload->setFolderName('Uploads/Watermarks');
+        $fields->addFieldToTab('Root.Watermark.Header.CustomerService', $WatermarkUpload);
 
         return $fields;
     }

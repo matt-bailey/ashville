@@ -12,7 +12,8 @@ class Slide extends DataObject
     );
 
     static $has_one = array(
-        'Image' => 'Image'
+        // 'Image' => 'Image'
+        'Image' => 'BetterImage'
     );
 
     public static $summary_fields = array(

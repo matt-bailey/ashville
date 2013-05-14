@@ -7,7 +7,8 @@
  * http://www.memdev.de
  *
  */
-class WatermarkGD extends GDBackend {
+// class WatermarkGD extends GDBackend {
+class WatermarkGD extends GD {
 	
   protected $watermark = null;
   protected $watermarkPosition = 3;
@@ -91,7 +92,8 @@ class WatermarkGD extends GDBackend {
     
     $quality = Object::get_static(get_class($this), 'default_quality');
     if (empty($quality)) {
-      $quality = Object::get_static('GDBackend', 'default_quality');
+      // $quality = Object::get_static('GDBackend', 'default_quality');
+      $quality = Object::get_static('GD', 'default_quality');
     }
     if (empty($quality)) {
       $quality = 100;

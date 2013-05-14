@@ -4,7 +4,7 @@
         <article class="item<% if First %> active<% end_if %>">
             <% if Image %>
             <% if Link %><a href="$Link" title="$Title"><% end_if %>
-                $Image.CroppedImage(870,470)
+                <img src="$WithWatermark.CroppedImage(870,470).URL" />
             <% if Link %></a><% end_if %>
             <% end_if %>
             <div class="carousel-caption<% if SlideCaptionPosition %> position-$SlideCaptionPosition<% end_if %>">

@@ -68,7 +68,8 @@ class WatermarkImage extends Image {
 			Director::baseFolder()."/" . $this->Filename
 		));
 		
-		if($backend->hasImageResource()) {
+		// if($backend->hasImageResource()) {
+    if($backend->hasGD()) {
 
 			$generateFunc = "generate$format";
 			if($this->hasMethod($generateFunc)){

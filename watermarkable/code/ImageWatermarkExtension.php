@@ -83,7 +83,8 @@ class ImageWatermarkExtension extends DataExtension {
       $transparency = 0;
     }
     
-    $quality = Object::get_static('GDBackend', 'default_quality');
+    // $quality = Object::get_static('GDBackend', 'default_quality');
+    $quality = Object::get_static('GD', 'default_quality');
     if (empty($quality)) {
       $quality = 100;
     } else if ($quality > 100) {
