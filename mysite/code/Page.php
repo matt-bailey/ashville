@@ -5,8 +5,8 @@ class Page extends SiteTree
         'ContentArea2' => 'HTMLText',
         'ContentArea3' => 'HTMLText',
         // 'SlideCaptionPosition' => "Enum('top, bottom')",
-        // 'ShowServicesSlides' => "Enum('yes, no')",
-        // 'ServicesSlidesPosition' => "Enum('right, below')"
+        //'ShowServicesSlides' => "Enum('yes, no')",
+        //'ServicesSlidesPosition' => "Enum('right, below')"
     );
 
     static $has_one = array(
@@ -18,7 +18,7 @@ class Page extends SiteTree
     static $many_many = array(
         'Slides' => 'Slide'
     );
-    
+
     static $many_many_extraFields = array(
         'Slides' => array(
             'SortID' => 'Int'
@@ -90,7 +90,7 @@ class Page extends SiteTree
                 'Slides',
                 $this->owner->Slides(),
                 $config
-            );      
+            );
             $fields->addFieldToTab('Root.SlideShow', $slidesField);
         }
 
@@ -120,7 +120,7 @@ class Page extends SiteTree
     /**
      * Get menu callout image
      */
-    // function getMenuCalloutImage() { 
+    // function getMenuCalloutImage() {
     //     return $this->MenuCallout();
     // }
 
@@ -199,13 +199,13 @@ class Page_Controller extends ContentController
     public function init()
     {
         parent::init();
-        // Note: you should use SS template require tags inside your templates 
-        // instead of putting Requirements calls here.  However these are 
+        // Note: you should use SS template require tags inside your templates
+        // instead of putting Requirements calls here.  However these are
         // included so that our older themes still work
         //Requirements::themedCSS('reset');
-        //Requirements::themedCSS('layout'); 
-        //Requirements::themedCSS('typography'); 
-        //Requirements::themedCSS('form'); 
+        //Requirements::themedCSS('layout');
+        //Requirements::themedCSS('typography');
+        //Requirements::themedCSS('form');
     }
 
     /**

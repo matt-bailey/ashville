@@ -5,7 +5,8 @@ class FloorPlanAreaImage extends DataObject
     static $db = array(
         'Title' => 'Varchar(255)',
         'Description' => 'HTMLText',
-        'LinkedFloorPlanArea' => 'Varchar(255)'
+        'LinkedFloorPlanArea' => 'Varchar(255)',
+        "SubsiteID" => "Int"
     );
 
     static $has_one = array(
@@ -17,14 +18,27 @@ class FloorPlanAreaImage extends DataObject
         'Title' => 'Title',
         'Description' => 'Description'
     );
-    
+
     static $default_sort = 'SortID';
-    
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
 
-        $floorPlanAreaDropdown = Dataobject::get('FloorPlanArea')->sort('Title')->map('ID', 'Title');
+        // Get current subsite
+        $subsite = Subsite::currentSubsite();
+        $subsiteID = '';
+        // Check if subsiteID is set (it won't be on the main site)
+        if ($subsite instanceof Subsite) {
+            $subsiteID = $subsite->getField('ID');
+        } else {
+            $subsiteID = '0';
+        }
+
+        $floorPlanAreaDropdown = Dataobject::get('FloorPlanArea')
+            ->where('SubsiteID = ' . $subsiteID)
+            ->sort('Title')
+            ->map('ID', 'Title');
 
         $ImageUpload = new UploadField('Image', 'Image');
         $ImageUpload->setFolderName('Uploads/CaseStudies');
@@ -56,7 +70,7 @@ class FloorPlanAreaImage extends DataObject
     }
 
     public function getThumbnail()
-    { 
+    {
         return $this->Image()->CMSThumbnail();
     }
 }
