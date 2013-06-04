@@ -13,11 +13,11 @@ class FloorPlanArea extends DataObject
     );
 
     static $default_sort = 'SortID';
-    
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
-        
+
         // Get current subsite
         $subsite = Subsite::currentSubsite();
         $subsiteID = '';
@@ -49,7 +49,7 @@ class FloorPlanArea extends DataObject
                 ->where('FloorPlan.ID = '.$this->LinkedFloorPlan)
                 ->sort('ID')
                 ->toArray();
-            
+
             // Get image filename from array
             foreach ($floorPlanImage as $inner)
             {
@@ -90,9 +90,9 @@ class FloorPlanArea extends DataObject
         $floorPlanAreaID = $this->ID;
 
         $records = DB::query(
-            "SELECT `FloorPlanArea`.*, `FloorPlanAreaImage`.* 
-            FROM `FloorPlanArea` 
-            LEFT JOIN `FloorPlanAreaImage` ON `FloorPlanArea`.`ID` = `FloorPlanAreaImage`.`LinkedFloorPlanArea` 
+            "SELECT `FloorPlanArea`.*, `FloorPlanAreaImage`.*
+            FROM `FloorPlanArea`
+            LEFT JOIN `FloorPlanAreaImage` ON `FloorPlanArea`.`ID` = `FloorPlanAreaImage`.`LinkedFloorPlanArea`
             WHERE `FloorPlanArea`.`ID` = $floorPlanAreaID
             "
         );

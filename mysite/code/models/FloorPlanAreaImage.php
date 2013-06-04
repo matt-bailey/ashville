@@ -5,7 +5,8 @@ class FloorPlanAreaImage extends DataObject
     static $db = array(
         'Title' => 'Varchar(255)',
         'Description' => 'HTMLText',
-        'LinkedFloorPlanArea' => 'Varchar(255)'
+        'LinkedFloorPlanArea' => 'Varchar(255)',
+        "SubsiteID" => "Int"
     );
 
     static $has_one = array(
@@ -17,9 +18,9 @@ class FloorPlanAreaImage extends DataObject
         'Title' => 'Title',
         'Description' => 'Description'
     );
-    
+
     static $default_sort = 'SortID';
-    
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
@@ -69,7 +70,7 @@ class FloorPlanAreaImage extends DataObject
     }
 
     public function getThumbnail()
-    { 
+    {
         return $this->Image()->CMSThumbnail();
     }
 }
