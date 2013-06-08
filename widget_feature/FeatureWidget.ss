@@ -1,6 +1,7 @@
+<div class="wm-float"></div>
 <% if WidgetLayoutType == 4 || WidgetLayoutType == 5 %>
 <% if FeatureImage %>
-<a class="img-link" href="$FeatureLink" title="$FeatureTitle">
+<a class="img-link wm-thick" href="$FeatureLink" title="$FeatureTitle">
     $FeatureImage.CroppedImage(767,497)
 </a>
 <% end_if %>
@@ -14,7 +15,7 @@
     <h4 class="h4"><a href="$FeatureLink" title="$FeatureTitle">$FeatureTitle</a></h4>
     <% end_if %>
     <% if FeatureImage %>
-    <a class="img-link" href="$FeatureLink" title="$FeatureTitle">
+    <a class="img-link wm-thick" href="$FeatureLink" title="$FeatureTitle">
         $FeatureImage.CroppedImage(767,497)
     </a>
     <% end_if %>

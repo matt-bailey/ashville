@@ -68,3 +68,4 @@ a:hover,a:focus{color:#d9d9d9;text-decoration:underline;}
 .typography h1,.typography h2,.typography h3,.typography h4,.typography h5,.typography h6{margin:0 0 20px;}
 .typography hr{border-top-width:2px;border-bottom-width:2px;border-color:#292929;}
 hr{border-top-width:2px;border-bottom-width:2px;border-color:#292929;}
+.img-link{display:block;}

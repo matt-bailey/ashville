@@ -3,8 +3,9 @@
         <% loop Slides %>
         <article class="item<% if First %> active<% end_if %>">
             <% if Image %>
-            <% if Link %><a href="$Link" title="$Title"><% end_if %>
-                $Image.CroppedImage(870,470)
+            <% if Link %><a class="wm-thin" href="$Link" title="$Title"><% end_if %>
+                <%-- $Image.CroppedImage(870,470) --%>
+                <img src="$Image.CroppedImage(870,470).URL" alt="$Title">
             <% if Link %></a><% end_if %>
             <% end_if %>
             <div class="carousel-caption<% if SlideCaptionPosition %> position-$SlideCaptionPosition<% end_if %>">
