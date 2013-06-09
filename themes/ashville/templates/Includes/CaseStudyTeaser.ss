@@ -13,7 +13,7 @@
         <% if Image %>
         <% if First %>
         <section class="media-object">
-            <a href="$Top.Link" title="Read More about $Title">
+            <a class="wm-thin" href="$Top.Link" title="Read More about $Title">
                 <img src="$Image.SetWidth(767).URL" alt="$Title">
             </a>
         </section>

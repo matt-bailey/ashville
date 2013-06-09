@@ -5,7 +5,9 @@
     <% end_if %>
     <% if Image %>
     <div class="media-object">
-        <img src="$Image.SetWidth(767).URL" alt="$Title" usemap="#$TitleKey">
+        <div class="wm-thin">
+            <img src="$Image.SetWidth(767).URL" alt="$Title" usemap="#$TitleKey">
+        </div>
     </div>
     <% end_if %>
     <div class="media-body">
