@@ -4,9 +4,10 @@ class FloorPlan extends DataObject
 {
     static $db = array(
         'Title' => 'Varchar(255)',
-        'Description' => 'HTMLText'
+        'Description' => 'HTMLText',
+        "SubsiteID" => "Int"
     );
-	
+
     static $has_one = array(
         'Image' => 'Image'
     );
@@ -18,7 +19,7 @@ class FloorPlan extends DataObject
     );
 
     static $default_sort = 'SortID';
-    
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
@@ -26,11 +27,24 @@ class FloorPlan extends DataObject
         $ImageUpload = new UploadField('Image', 'Floor plan');
         $ImageUpload->setFolderName('Uploads/FloorPlans');
 
+        // Get current subsite
+        $subsite = Subsite::currentSubsite();
+        $subsiteID = '';
+        // Check if subsiteID is set (it won't be on the main site)
+        if ($subsite instanceof Subsite) {
+            $subsiteID = $subsite->getField('ID');
+        } else {
+            $subsiteID = '0';
+        }
+        // Set the subsiteID HiddenField
+        $subsiteField = new HiddenField('SubsiteID', 'Subsite ID', $subsiteID);
+
         return new FieldList(
             new TextField('Title', 'Floor plan name'),
             new HtmlEditorField('Description', 'Description'),
             new LiteralField('ImgUploadInstructions', '<div><p>Recommended image width at least 767px.</p></div>'),
-            $ImageUpload
+            $ImageUpload,
+            $subsiteField
         );
     }
 
@@ -39,9 +53,9 @@ class FloorPlan extends DataObject
         $floorPlanID = $this->ID;
 
         $records = DB::query(
-            "SELECT `FloorPlan`.*, `FloorPlanArea`.* 
-            FROM `FloorPlan` 
-            LEFT JOIN `FloorPlanArea` ON `FloorPlan`.`ID` = `FloorPlanArea`.`LinkedFloorPlan` 
+            "SELECT `FloorPlan`.*, `FloorPlanArea`.*
+            FROM `FloorPlan`
+            LEFT JOIN `FloorPlanArea` ON `FloorPlan`.`ID` = `FloorPlanArea`.`LinkedFloorPlan`
             WHERE `FloorPlan`.`ID` = $floorPlanID
             "
         );
@@ -73,11 +87,11 @@ class FloorPlan extends DataObject
 
         return $output;
     }
-    
-	public function getThumbnail()
-    { 
-		return $this->Image()->CMSThumbnail(); 
-	}
+
+    public function getThumbnail()
+    {
+        return $this->Image()->CMSThumbnail();
+    }
 
     public function getTitleKey()
     {

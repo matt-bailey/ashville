@@ -6,7 +6,9 @@ class CaseStudyHolder extends Page
     
     static $db = array();
 
-    static $has_one = array();
+    static $has_one = array(
+        "Subsite" => "Subsite"
+    );
     
     static $has_many = array(
         'CaseStudyCategories' => 'CaseStudyCategory',

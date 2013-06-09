@@ -1,0 +1,101 @@
+/**
+ * wm.less - Watermark
+ *
+ * The 'wm' class should be put on the element wrapping the image
+ */
+
+
+/* ==========================================================================
+   Defaults
+   ========================================================================== */
+
+.wm-thin,
+.wm-thick {
+    position: relative;
+    display: block;
+    z-index: 0;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.wm-thin {
+    &:before {
+        background: transparent url(../images/wm-thin.png) no-repeat center center;
+        background-size: contain;
+    }
+}
+
+.wm-thick {
+    &:before {
+        background: transparent url(../images/wm-thick.png) no-repeat center center;
+        background-size: contain;
+    }
+}
+
+.wm-float {
+    display: none;
+}
+
+
+/* ==========================================================================
+   Feature widget
+   ========================================================================== */
+
+// If layout set to image float left/right
+.FeatureWidget {
+    &.img-right,
+    &.img-left {
+        // Remove default watermark
+        // .wm-thin,
+        // .wm-thick {
+        //     content: none;
+        //     background-image: none;
+        // }
+        // Add floated watermark
+        .wm-float {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: block;
+            z-index: 2;
+            width: 50%;
+            height: 100%;
+            background: transparent url(../images/wm-thick.png) no-repeat center center;
+            background-size: contain;
+        }
+    }
+    &.img-right {
+        .wm-float {
+            right: 0;
+        }
+    }
+    &.img-left {
+        .wm-float {
+            left: 0;
+        }
+    }
+}
+
+// Media queries
+// Landscape phone to desktop/tablet
+@media @landscape-phone-to-tablet {
+    .FeatureWidget {
+        &.img-right,
+        &.img-left {
+            .wm-float {
+                display: none;
+            }
+        }
+    }
+}
