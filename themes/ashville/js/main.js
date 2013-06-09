@@ -69,4 +69,27 @@ $(document).ready(function() {
     // Initialise slideshow pagination
     $('.carousel-thumbs, .carousel-buttons').slideshowPagination();
 
+
+    /* ==========================================================================
+       Back to top
+       ========================================================================== */
+
+    // initialise back to top
+    $('#backtotop').click(function(){
+        $('html, body').animate({scrollTop:0}, 'slow');
+        return false;
+    });
+
+    // toggle back to top
+    $(window).scroll(function(){
+        // get the height
+        var h = $('body').height();
+        var y = $(window).scrollTop();
+        if( y > (h*0.25) && y < (h*0.75) ){
+            $("#backtotop").fadeIn('slow');
+        } else {
+            $('#backtotop').fadeOut('slow');
+        }
+    });
+
 });
