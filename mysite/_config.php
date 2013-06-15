@@ -29,7 +29,7 @@ i18n::set_locale('en_GB');
 if (class_exists('SiteTree')) SiteTree::enable_nested_urls();
 
 // Enable full text search
-//FulltextSearchable::enable();
+FulltextSearchable::enable();
 
 // Better image quality
 GD::set_default_quality(95);

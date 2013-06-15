@@ -3,7 +3,7 @@
 .hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;}
 .input-block-level{display:block;width:100%;min-height:30px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
 .horizontal-rule hr{border-top-width:2px;border-bottom-width:2px;border-color:#292929;}
-body{margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;color:#ffffff;background-color:#333333;}
+body{margin:0;font-family:"proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;color:#ffffff;background-color:#333333;}
 a{color:#ffffff;text-decoration:none;}
 a:hover,a:focus{color:#d9d9d9;text-decoration:underline;}
 .img-rounded{-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;}
@@ -28,7 +28,7 @@ a:hover,a:focus{color:#d9d9d9;text-decoration:underline;}
 .typography .text-left{text-align:left;}
 .typography .text-right{text-align:right;}
 .typography .text-center{text-align:center;}
-.typography h1,.typography h2,.typography h3,.typography h4,.typography h5,.typography h6{margin:10px 0;font-family:inherit;font-weight:bold;line-height:20px;color:inherit;text-rendering:optimizelegibility;}.typography h1 small,.typography h2 small,.typography h3 small,.typography h4 small,.typography h5 small,.typography h6 small{font-weight:normal;line-height:1;color:#999999;}
+.typography h1,.typography h2,.typography h3,.typography h4,.typography h5,.typography h6{margin:10px 0;font-family:inherit;font-weight:600;line-height:20px;color:inherit;text-rendering:optimizelegibility;}.typography h1 small,.typography h2 small,.typography h3 small,.typography h4 small,.typography h5 small,.typography h6 small{font-weight:normal;line-height:1;color:#999999;}
 .typography h1,.typography h2,.typography h3{line-height:40px;}
 .typography h1{font-size:38.5px;}
 .typography h2{font-size:31.5px;}
@@ -69,3 +69,5 @@ a:hover,a:focus{color:#d9d9d9;text-decoration:underline;}
 .typography hr{border-top-width:2px;border-bottom-width:2px;border-color:#292929;}
 hr{border-top-width:2px;border-bottom-width:2px;border-color:#292929;}
 .img-link{display:block;}
+body{font-weight:300;}
+strong{font-weight:600;}

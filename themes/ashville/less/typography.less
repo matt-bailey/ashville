@@ -2,21 +2,24 @@
  * Typography
  */
 
+
 /* ==========================================================================
    Imports
    ========================================================================== */
 
 // Core variables and mixins
 @import "../bootstrap/less/variables.less";
-@import "variables-colours.less";
+// @import "variables-colours.less";
 @import "../bootstrap/less/mixins.less";
 @import "mixins.less";
+
 
 /* ==========================================================================
    Scaffolding - pull in base font styling etc. for SS
    ========================================================================== */
 
 @import "../bootstrap/less/scaffolding.less";
+
 
 /* ==========================================================================
    Encapsulate Bootstrap type.less styles in .typography wrapper for SS
@@ -25,6 +28,7 @@
 .typography {
     @import "../bootstrap/less/type.less";
 }
+
 
 /* ==========================================================================
    Boostrap overrides
@@ -49,3 +53,12 @@
 .img-link {
     display: block;
 }
+
+
+/* ==========================================================================
+   Fonts and weights
+   ========================================================================== */
+
+body { font-weight: 300; }
+
+strong { font-weight: 600; }

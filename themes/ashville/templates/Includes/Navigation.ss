@@ -8,10 +8,9 @@ nav .$MenuItem {
 <% end_loop %>
 <% end_if %>
 </style>
-<div class="container">
-    <nav role="navigation">
-        <a class="brand" href="$BaseHref" rel="home">$SiteConfig.Title</a>
-        <ul>
+<div class="mega-menu">
+    <nav class="container" role="navigation">
+        <ul class="navigation">
             <% loop $Menu(1) %>
             <li class="$LinkingMode<% if FirstLast %> $FirstLast<% end_if %>">
                 <a href="$Link" title="$Title.XML">$MenuTitle.XML</a>
@@ -26,9 +25,11 @@ nav .$MenuItem {
                 <% end_if %>
             </li>
             <% end_loop %>
+            <% if $SearchForm %>
+            <li class="nav-search pull-right">
+                $SearchForm
+            </li>
+            <% end_if %>
         </ul>
-        <% if $SearchForm %>
-        $SearchForm
-        <% end_if %>
     </nav>
 </div>

@@ -6,6 +6,64 @@
    Ashville mega menu
    ========================================================================== */
 
+/* Layout */
+.mega-menu {
+    margin-bottom: (@baseLineHeight * 1.5);
+    border-bottom: 5px solid @grayDarker;
+    background-color: @black;
+    // Top level
+    .navigation {
+        position: relative;
+        margin: 0;
+        list-style: none;
+        > li {
+            .ie7-inline-block();
+            display: inline-block;
+            padding: (@baseLineHeight /  2) 0;
+            margin-right: @baseLineHeight;
+            &:last-child { margin-right: 0; }
+        }
+    }
+    // Submenus
+    .submenu {
+        position: absolute;
+        left: -9999px;
+        margin: 0;
+        list-style: none;
+    }
+}
+
+/* Styling */
+.mega-menu {
+    // Defaults
+    a {
+        color: @grayLight;
+        font-weight: 600;
+        text-decoration: none;
+        &:hover { color: @white; }
+    }
+    // Highlight current item
+    .navigation {
+        > li {
+            &.current {
+                a { color: @white; }
+            }
+        }
+    }
+}
+
+/* Search */
+.nav-search {
+    // padding: (@baseLineHeight /  2) 0 !important;
+    padding: 0 !important;
+    form { margin: 0 !important; }
+    input {
+        margin-top: 4px !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+
 /* ==========================================================================
    Navbar - extending Bootstrap's default styling for SS
    ========================================================================== */

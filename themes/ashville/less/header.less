@@ -1,0 +1,93 @@
+/**
+ * Header
+ */
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+header { background-color: @grayDarker; }
+
+
+/* ==========================================================================
+   Logo
+   ========================================================================== */
+
+.logo {
+    margin: (@baseLineHeight / 2) 0 0;
+}
+
+/* Tagline */
+.tagline {
+    font-weight: bold;
+    font-size: 1.143em;
+}
+
+/* ==========================================================================
+   Secondary links
+   ========================================================================== */
+
+/* Layout */
+.secondary-links {
+    padding: (@baseLineHeight / 4) 0;
+    margin-bottom: 0;
+    text-align: right;
+    list-style: none;
+    li {
+        .ie7-inline-block();
+        display: inline-block;
+        margin-right: (@baseLineHeight / 1.5);
+        &:last-child { margin-right: 0; }
+    }
+}
+
+/* Links */
+.secondary-links {
+    a {
+        color: @grayLight;
+        text-decoration: none;
+        &:hover { text-decoration: underline; }
+    }
+}
+
+
+/* ==========================================================================
+   Site info
+   ========================================================================== */
+
+/* Layout */
+.siteinfo-container {
+    border-bottom: 1px solid @grayDarker;
+    background-color: @black;
+}
+
+/* Phone number */
+.phone-number {
+    padding: @baseLineHeight 0 (@baseLineHeight / 4);
+    font-weight: bold;
+    font-size: 2em;
+    text-align: right;
+}
+
+/* Social Links */
+.social-links {
+    padding: 0 0 (@baseLineHeight / 2);
+    margin: 0;
+    text-align: right;
+    list-style: none;
+    li {
+        .ie7-inline-block();
+        display: inline-block;
+        height: 25px;
+        line-height: 25px;
+        margin-right: (@baseLineHeight / 2);
+        &:last-child { margin-right: 0; }
+    }
+}
+
+/* Icons */
+.social-links {
+    [class*="ss-icon"] {
+        vertical-align: middle;
+    }
+}
