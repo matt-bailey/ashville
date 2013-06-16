@@ -26,7 +26,7 @@ nav .$MenuItem {
             </li>
             <% end_loop %>
             <% if $SearchForm %>
-            <li class="nav-search pull-right">
+            <li class="nav-search pull-right span3">
                 $SearchForm
             </li>
             <% end_if %>
