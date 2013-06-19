@@ -2,10 +2,70 @@
  * Footer
  */
 
-/* ==========================================================================
 
+/* ==========================================================================
+   Footer
    ========================================================================== */
 
 footer {
+    padding: (@baseLineHeight * 1.5) 0 (@baseLineHeight * 3);
     background-color: @black;
+}
+
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+/* Layout */
+.footer-buttons {
+    margin: 0 0 @baseLineHeight;
+    list-style: none;
+    li {
+        .ie7-inline-block();
+        display: inline-block;
+        margin-right: @baseLineHeight;
+        &:last-child { margin-right: 0; }
+    }
+}
+
+/* Icons */
+.footer-buttons {
+    .right {
+        position: relative;
+        font-size: 1.143em;
+        font-weight: 600;
+        &[class*="ss-"]:after {
+            padding-left: 40px;
+            font-size: 9px;
+        }
+        &[class*="ss-"]:before {
+            position: absolute;
+            top: 0;
+            right: 46px;
+            bottom: 0;
+            display: block;
+            width: 1px;
+            height: 100%;
+            content: "";
+            background-color: @black;
+        }
+    }
+}
+
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.footer-logos {
+    margin: 0 0 @baseLineHeight;
+    list-style: none;
+    text-align: right;
+    li {
+        .ie7-inline-block();
+        display: inline-block;
+        margin-right: (@baseLineHeight / 1.5);
+        &:last-child { margin-right: 0; }
+    }
 }
