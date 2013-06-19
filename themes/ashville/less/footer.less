@@ -12,6 +12,14 @@ footer {
     background-color: @black;
 }
 
+// Media queries
+@media @landscape-phone-to-tablet {
+    footer {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
 
 /* ==========================================================================
    Buttons
@@ -26,6 +34,16 @@ footer {
         display: inline-block;
         margin-right: @baseLineHeight;
         &:last-child { margin-right: 0; }
+    }
+}
+
+// Media queries
+@media @landscape-phone-to-tablet {
+    .footer-buttons {
+        &.pull-left {
+            float: none;
+            text-align: left;
+        }
     }
 }
 
@@ -68,4 +86,24 @@ footer {
         margin-right: (@baseLineHeight / 1.5);
         &:last-child { margin-right: 0; }
     }
+}
+
+// Media queries
+@media @landscape-phone-to-tablet {
+    .footer-logos {
+        &.pull-right {
+            float: none;
+            text-align: left;
+        }
+    }
+}
+
+
+/* ==========================================================================
+   Contact details
+   ========================================================================== */
+
+// Media queries
+@media @landscape-phone-to-tablet {
+    .contact-details { text-align: left; }
 }

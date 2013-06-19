@@ -33,6 +33,14 @@
     }
 }
 
+// Media queries
+@media @landscape-phone-to-tablet {
+    .navigation {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
 /* Styling */
 .mega-menu {
     // Defaults
@@ -75,6 +83,45 @@
         position: absolute;
         right: 0;
         padding: 10px;
+    }
+}
+
+// Media queries
+@media @landscape-phone-to-tablet {
+    .nav-search {
+        button { right: 20px; }
+    }
+}
+
+
+/* Mini menu
+   ========================================================================== */
+
+.mini-menu-btn {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    display: block;
+    padding: 5px 7px 1px;
+    color: @black;
+    font-size: 12px;
+    text-decoration: none;
+    background-color: @white; // non-rgba fallback
+    background-color: rgba(255,255,255,.5);
+    &:hover {
+        color: @black;
+        background-color: rgba(255,255,255,1);
+    }
+}
+
+// Media queries
+@media @landscape-phone-to-tablet {
+    /* Layout */
+    .mega-menu {
+        // Top level
+        .navigation {
+            > li { display: block; }
+        }
     }
 }
 

@@ -39,6 +39,7 @@
                 </ul>
                 <% end_if %>
             </div>
+            <a class="mini-menu-btn visible-phone ss-icon ss-rows" href="#"></a>
         </div>
     </div>
 </header>

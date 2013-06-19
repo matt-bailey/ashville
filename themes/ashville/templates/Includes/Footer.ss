@@ -20,7 +20,7 @@
         <% end_if %>
     </div>
     <div class="container">
-        <div class="vcard">
+        <div class="contact-details vcard">
             <p class="adr"><% if $SiteConfig.CompanyName %>&#169; <span class="fn"><a class="url" href="$BaseHref" title="$SiteConfig.CompanyName" rel="home">$SiteConfig.CompanyName</a></span>&#46; <% end_if %><% if $SiteConfig.CompanyAddress %><span class="address">$SiteConfig.CompanyAddress</span><% end_if %></p>
             <p><% if $SiteConfig.CompanyTelephone %><strong>Telephone:</strong> <span class="tel">$SiteConfig.CompanyTelephone</span><br /><% end_if %>
             <% if $SiteConfig.CompanyEmail %><strong>Email:</strong> <span class="email"><a href="mailto:$SiteConfig.CompanyEmail" title="Email Us">$SiteConfig.CompanyEmail</a></span><% end_if %></p>

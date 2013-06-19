@@ -41,7 +41,7 @@
 
         <% include Header %>
         <% include Navigation %>
-        <div class="container typography" role="main">
+        <div class="container main typography" role="main">
             <% include Breadcrumbs %>
             $Layout
         </div>

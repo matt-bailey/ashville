@@ -41,6 +41,15 @@ header { background-color: @grayDarker; }
     }
 }
 
+// Media queries
+@media @landscape-phone-to-tablet {
+    .secondary-links {
+        text-align: left;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
 /* Links */
 .secondary-links {
     a {
@@ -59,6 +68,21 @@ header { background-color: @grayDarker; }
 .siteinfo-container {
     border-bottom: 1px solid @grayDarker;
     background-color: @black;
+    .container { position: relative; }
+}
+
+// Media queries
+@media @landscape-phone-to-tablet {
+    .siteinfo-container {
+        padding-right: 20px;
+        padding-left: 20px;
+        // Div alignments
+        .pull-right,
+        .pull-left {
+            float: none;
+            text-align: left;
+        }
+    }
 }
 
 /* Phone number */
@@ -67,6 +91,11 @@ header { background-color: @grayDarker; }
     font-weight: bold;
     font-size: 2em;
     text-align: right;
+}
+
+// Media queries
+@media @landscape-phone-to-tablet {
+    .phone-number { text-align: left; }
 }
 
 /* Social Links */
@@ -90,4 +119,9 @@ header { background-color: @grayDarker; }
     [class*="ss-icon"] {
         vertical-align: middle;
     }
+}
+
+// Media queries
+@media @landscape-phone-to-tablet {
+    .social-links { text-align: left; }
 }
