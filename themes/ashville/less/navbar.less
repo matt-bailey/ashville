@@ -22,14 +22,52 @@
             padding: (@baseLineHeight /  2) 0;
             margin-right: @baseLineHeight;
             &:last-child { margin-right: 0; }
+            // Add a bit of extra hit-target for dropdown triggering
+            a { padding-bottom: (@baseLineHeight /  2); }
         }
     }
     // Submenus
     .submenu {
         position: absolute;
         left: -9999px;
+        z-index: 9999;
+        width: 220px;
+        min-height: 220px;
+        padding-top: (@baseLineHeight /  2);
         margin: 0;
         list-style: none;
+        .link,
+        .current {
+            // width: 100%;
+            padding: 0 (@baseLineHeight /  2);
+            a {
+                display: block;
+                padding-bottom: 0;
+            }
+        }
+    }
+    // Show sudmenu on hover
+    .link,
+    .current,
+    .section {
+        a {
+            &:hover {
+                & + .submenu {
+                    left: auto;
+                    margin-left: -(@baseLineHeight /  2);
+                }
+            }
+            & + .submenu {
+                &:hover {
+                    left: auto;
+                    margin-left: -(@baseLineHeight /  2);
+                }
+            }
+        }
+    }
+    // If submenu width will take it off the screen
+    .edge {
+        .submenu { right: 0 !important; }
     }
 }
 
@@ -39,6 +77,7 @@
         padding-right: 20px;
         padding-left: 20px;
     }
+    .submenu { display: none; }
 }
 
 /* Styling */
@@ -52,10 +91,24 @@
     }
     // Highlight current item
     .navigation {
-        > li {
-            &.current {
-                a { color: @white; }
-            }
+        .current,
+        .section {
+            > a { color: @white; }
+        }
+    }
+    // Submenus
+    .submenu {
+        background-color: @black;
+        .box-shadow(0 5px 10px rgba(0,0,0,.5));
+        a { font-weight: 300; }
+        .submenu-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            width: 50%;
+            height: 100%;
         }
     }
 }

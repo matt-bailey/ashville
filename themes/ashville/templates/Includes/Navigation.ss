@@ -1,9 +1,14 @@
 <style>
 <% if SiteConfig.MenuCallouts %>
 <% loop SiteConfig.MenuCallouts %>
-nav .$MenuItem {
+nav .$MenuItem { width: 440px !important; }
+nav .$MenuItem .link,
+nav .$MenuItem .current { width: 50%; }
+nav .$MenuItem .submenu-bg {
     background-image: url('$Image.URL');
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 <% end_loop %>
 <% end_if %>
@@ -21,6 +26,7 @@ nav .$MenuItem {
                         <a href="$Link" title="$Title.XML">$MenuTitle.XML</a>
                     </li>
                     <% end_loop %>
+                    <div class="submenu-bg"></div>
                 </ul>
                 <% end_if %>
             </li>

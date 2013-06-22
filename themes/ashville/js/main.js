@@ -5,6 +5,53 @@
 $(document).ready(function() {
 
     /* ==========================================================================
+       Main navigation dropdown positioning
+       ========================================================================== */
+
+    // If submenu will go off the screen on the right move it back to fit
+    $(".navigation > li").on('mouseover', function () {
+        var elm = $('.submenu:first', this);
+        var off = elm.offset();
+        var l = off.left;
+        var w = elm.width();
+        // var docH = $(".navigation").height();
+        var docW = $(".navigation").width();
+        var isEntirelyVisible = (l + w <= docW);
+        if (!isEntirelyVisible) {
+            $(this).addClass('edge');
+        } else {
+            $(this).removeClass('edge');
+        }
+    });
+
+    /* ==========================================================================
+       Mini menu
+       ========================================================================== */
+
+    $('.mini-menu-btn').click(function(e) {
+        $('.navigation').slideToggle('fast');
+        // return false;
+        e.preventDefault();
+    });
+
+    /* Run function after window resize */
+    $(window).resize(function() {
+        clearTimeout(this.id);
+        this.id = setTimeout(doneResizing, 250);
+    });
+
+    /* Manage mini menu on window resize */
+    function doneResizing() {
+        if ($(window).width() > 767) {
+            if ($('.navigation').is(":hidden")) {
+                $('.navigation').slideDown('fast');
+            } else {
+                return false;
+            }
+        }
+    }
+
+    /* ==========================================================================
        Case studies
        ========================================================================== */
 
