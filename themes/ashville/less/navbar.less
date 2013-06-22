@@ -33,20 +33,19 @@
         z-index: 9999;
         width: 220px;
         min-height: 220px;
-        padding-top: (@baseLineHeight /  2);
+        padding-top: (@baseLineHeight / 2);
         margin: 0;
         list-style: none;
         .link,
         .current {
-            // width: 100%;
-            padding: 0 (@baseLineHeight /  2);
+            padding: 0 (@baseLineHeight / 1.5);
             a {
                 display: block;
                 padding-bottom: 0;
             }
         }
     }
-    // Show sudmenu on hover
+    // Show submenu on hover
     .link,
     .current,
     .section {
@@ -54,13 +53,13 @@
             &:hover {
                 & + .submenu {
                     left: auto;
-                    margin-left: -(@baseLineHeight /  2);
+                    margin-left: -(@baseLineHeight / 1.5);
                 }
             }
             & + .submenu {
                 &:hover {
                     left: auto;
-                    margin-left: -(@baseLineHeight /  2);
+                    margin-left: -(@baseLineHeight / 1.5);
                 }
             }
         }
@@ -74,6 +73,7 @@
 // Media queries
 @media @landscape-phone-to-tablet {
     .navigation {
+        display: none;
         padding-right: 20px;
         padding-left: 20px;
     }
