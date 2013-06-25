@@ -44,6 +44,18 @@ footer {
             float: none;
             text-align: left;
         }
+        li {
+            margin-right: (@baseLineHeight / 2);
+            margin-bottom: (@baseLineHeight / 2);
+            &:last-child { margin-bottom: 0; }
+        }
+        .right { font-size: 1em !important; }
+    }
+}
+@media @tablet-to-desktop {
+    .footer-buttons {
+        li { margin-right: (@baseLineHeight / 2); }
+        .right { font-size: 1em !important; }
     }
 }
 

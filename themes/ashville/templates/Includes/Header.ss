@@ -10,15 +10,16 @@
     <% end_if %>
     <div class="siteinfo-container">
         <div class="container">
-            <div class="pull-left">
-                <% if URLSegment = home %><h1 class="logo"><% else %><div class="logo"><% end_if %>
-                    <a href="$BaseHref" rel="home" title="$SiteConfig.Title">$SiteConfig.Title</a>
+            <div class="brand pull-left">
+                <div class="brand-icon pull-left"><a class="brand-link" href="$BaseHref" rel="home" title="$SiteConfig.Title"></a></div>
+                <% if URLSegment = home %><h1 class="brand-text"><% else %><div class="brand-text"><% end_if %>
+                    <a class="brand-link" href="$BaseHref" rel="home" title="$SiteConfig.Title">$SiteConfig.Title</a>
                 <% if URLSegment = home %></h1><% else %></div><% end_if %>
                 <% if $SiteConfig.Tagline %>
                 <div class="tagline">$SiteConfig.Tagline</div>
                 <% end_if %>
             </div>
-            <div class="pull-right">
+            <div class="co-info pull-right">
                 <% if $SiteConfig.CompanyTelephone %>
                 <div class="phone-number">$SiteConfig.CompanyTelephone</div>
                 <% end_if %>

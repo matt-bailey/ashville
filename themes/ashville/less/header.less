@@ -10,18 +10,93 @@ header { background-color: @grayDarker; }
 
 
 /* ==========================================================================
-   Logo
+   Brand logo
    ========================================================================== */
 
-.logo {
-    margin: (@baseLineHeight / 2) 0 0;
+.brand-icon {
+    position: relative;
+    display: block;
+    width: 62px;
+    height: 60px;
+    padding: 10px 0;
+    background-image: url('../images/ashville-a.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    .brand-link {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+.brand-text {
+    position: relative;
+    display: block;
+    width: 245px;
+    height: 23px;
+    margin: 15px 0 10px 82px;
+    background-image: url('../images/ashville-logo-text.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    // Hide text accessibly
+    direction: ltr;
+    text-indent: -999em;
+    .brand-link { display: block; }
 }
 
 /* Tagline */
 .tagline {
+    display: block;
     font-weight: bold;
     font-size: 1.143em;
+    white-space: nowrap;
+    margin-left: 82px;
 }
+
+// Media queries
+@media @landscape-phone-to-tablet {
+    .brand,
+    .brand-icon {
+        &.pull-left {
+            float: left !important;
+        }
+    }
+    .brand-icon {
+        width: 47px;
+        height: 45px;
+    }
+    .brand-text {
+        width: 192px;
+        height: 18px;
+        margin: 15px 0 5px 61px;
+    }
+    .tagline {
+        font-size: 1em;
+        margin-left: 61px;
+    }
+}
+@media @tablet-to-desktop {
+    .brand-icon {
+        width: 47px;
+        height: 45px;
+    }
+    .brand-text {
+        width: 192px;
+        height: 18px;
+        margin: 15px 0 5px 61px;
+    }
+    .tagline {
+        font-size: 1em;
+        margin-left: 61px;
+    }
+}
+
 
 /* ==========================================================================
    Secondary links
@@ -95,7 +170,26 @@ header { background-color: @grayDarker; }
 
 // Media queries
 @media @landscape-phone-to-tablet {
-    .phone-number { text-align: left; }
+    .phone-number {
+        padding-top: (@baseLineHeight / 2);
+        text-align: left;
+    }
+    .co-info {
+        &.pull-right {
+            float: left !important;
+        }
+    }
+}
+@media @tablet-to-desktop {
+    .phone-number {
+        padding-top: (@baseLineHeight / 2);
+        text-align: left;
+    }
+    .co-info {
+        &.pull-right {
+            float: left !important;
+        }
+    }
 }
 
 /* Social Links */
