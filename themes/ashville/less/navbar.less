@@ -20,8 +20,8 @@
             .ie7-inline-block();
             display: inline-block;
             padding: (@baseLineHeight /  2) 0;
-            margin-right: @baseLineHeight;
-            &:last-child { margin-right: 0; }
+            margin-right: (@baseLineHeight / 2);
+            &.last { margin-right: 0; }
             // Add a bit of extra hit-target for dropdown triggering
             a { padding-bottom: (@baseLineHeight /  2); }
         }
@@ -32,7 +32,7 @@
         left: -9999px;
         z-index: 9999;
         width: 220px;
-        min-height: 220px;
+        min-height: 160px;
         padding-top: (@baseLineHeight / 2);
         margin: 0;
         list-style: none;
@@ -70,6 +70,10 @@
     }
 }
 
+// @large-desktop-and-up: ~"(min-width: 1200px)";
+// @tablet-to-desktop: ~"(min-width: 768px) and (max-width: 979px)";
+// @landscape-phone-to-tablet: ~"(max-width: 767px)";
+
 // Media queries
 @media @landscape-phone-to-tablet {
     .navigation {
@@ -78,6 +82,20 @@
         padding-left: 20px;
     }
     .submenu { display: none; }
+}
+@media @tablet-to-desktop {
+    .mega-menu {
+        .navigation {
+            > li { margin-right: (@baseLineHeight / 2); }
+        }
+    }
+}
+@media @large-desktop-and-up {
+    .mega-menu {
+        .navigation {
+            > li { margin-right: @baseLineHeight; }
+        }
+    }
 }
 
 /* Styling */
@@ -117,6 +135,7 @@
 .nav-search {
     // padding: (@baseLineHeight /  2) 0 !important;
     padding: 0 !important;
+    margin-left: 0;
     form { margin: 0 !important; }
     input[type="text"],
     button {
