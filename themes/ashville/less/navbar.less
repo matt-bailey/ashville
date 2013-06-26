@@ -70,10 +70,6 @@
     }
 }
 
-// @large-desktop-and-up: ~"(min-width: 1200px)";
-// @tablet-to-desktop: ~"(min-width: 768px) and (max-width: 979px)";
-// @landscape-phone-to-tablet: ~"(max-width: 767px)";
-
 // Media queries
 @media @landscape-phone-to-tablet {
     .navigation {
@@ -86,7 +82,6 @@
             > li { padding: (@baseLineHeight / 3) 0; }
         }
     }
-    .submenu { display: none; }
 }
 @media @tablet-to-desktop {
     .mega-menu {
@@ -200,6 +195,35 @@
             > li { display: block; }
         }
     }
+    /* Submenu */
+    .mega-menu {
+        .submenu {
+            position: relative;
+            left: 0;
+            display: block;
+            min-height: auto;
+            .link,
+            .current { padding: (@baseLineHeight / 3) (@baseLineHeight / 1.5); }
+            .submenu-bg { display: none; }
+        }
+    }
+    // Disable default hover effect
+    .mega-menu {
+        .link,
+        .current,
+        .section {
+            a {
+                &:hover {
+                    & + .submenu { margin-left: 0; }
+                }
+                & + .submenu {
+                    &:hover { margin-left: 0; }
+                }
+            }
+        }
+    }
+    // Search input
+    .nav-search { margin-top: (@baseLineHeight / 1.5); }
 }
 
 

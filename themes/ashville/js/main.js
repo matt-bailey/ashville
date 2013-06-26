@@ -42,12 +42,13 @@ $(document).ready(function() {
 
     /* Manage mini menu on window resize */
     function doneResizing() {
-        if ($(window).width() > 767) {
-            if ($('.navigation').is(":hidden")) {
-                $('.navigation').slideDown('fast');
-            } else {
-                return false;
-            }
+        if ($(window).innerWidth() > 767) {
+            // if ($('.navigation').is(":hidden")) {
+            //     $('.navigation').slideDown('fast');
+            // } else {
+            //     return false;
+            // }
+            $(".navigation").removeAttr("style");
         }
     }
 
