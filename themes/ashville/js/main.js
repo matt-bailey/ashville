@@ -25,7 +25,7 @@ $(document).ready(function() {
     });
 
     /* ==========================================================================
-       Mini menu
+       Mobile menu
        ========================================================================== */
 
     $('.mini-menu-btn').click(function(e) {
@@ -51,6 +51,15 @@ $(document).ready(function() {
             $(".navigation").removeAttr("style");
         }
     }
+
+    /* Submenu toggle */
+    $('.mega-menu .toggle').click(function(e) {
+        $(this).next('.submenu').slideToggle('fast', function() {
+            $(this).prev('.toggle').toggleClass('open');
+        });
+        // return false;
+        e.preventDefault();
+    });
 
     /* ==========================================================================
        Case studies

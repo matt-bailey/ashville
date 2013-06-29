@@ -17,6 +17,7 @@
         margin: 0;
         list-style: none;
         > li {
+            position: relative;
             .ie7-inline-block();
             display: inline-block;
             padding: (@baseLineHeight /  2) 0;
@@ -166,7 +167,7 @@
 }
 
 
-/* Mini menu
+/* Mobile menu
    ========================================================================== */
 
 .mini-menu-btn {
@@ -186,6 +187,24 @@
     }
 }
 
+.mega-menu {
+    .toggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        width: 30px;
+        text-align: center;
+        vertical-align: middle;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        &.open {
+            &:before { content:'' }
+        }
+    }
+}
+
 // Media queries
 @media @landscape-phone-to-tablet {
     /* Layout */
@@ -200,11 +219,17 @@
         .submenu {
             position: relative;
             left: 0;
-            display: block;
+            display: none;
             min-height: auto;
             .link,
             .current { padding: (@baseLineHeight / 3) (@baseLineHeight / 1.5); }
             .submenu-bg { display: none; }
+        }
+    }
+    // Open by default if in section
+    .mega-menu {
+        .section {
+            .submenu { display: block; }
         }
     }
     // Disable default hover effect
