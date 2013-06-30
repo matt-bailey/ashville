@@ -20,7 +20,6 @@ nav .$MenuItem .submenu-bg {
             <li class="$LinkingMode<% if FirstLast %> $FirstLast<% end_if %>">
                 <a href="$Link" title="$Title.XML">$MenuTitle.XML</a>
                 <% if Children %>
-                <a class="toggle ss-navigatedown visible-phone" href="#"></a>
                 <ul class="submenu $Title.StringToKey">
                     <% loop Children %>
                     <li class="$LinkingMode<% if FirstLast %> $FirstLast<% end_if %>">
@@ -29,6 +28,7 @@ nav .$MenuItem .submenu-bg {
                     <% end_loop %>
                     <div class="submenu-bg"></div>
                 </ul>
+                <a class="toggle ss-navigatedown visible-phone" href="#"></a>
                 <% end_if %>
             </li>
             <% end_loop %>

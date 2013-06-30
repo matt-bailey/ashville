@@ -4,23 +4,28 @@
 
 $(document).ready(function() {
 
+    /* Function to check if element exists */
+    $.fn.exists = function() { return this.length>0; };
+
     /* ==========================================================================
        Main navigation dropdown positioning
        ========================================================================== */
 
     // If submenu will go off the screen on the right move it back to fit
     $(".navigation > li").on('mouseover', function () {
-        var elm = $('.submenu:first', this);
-        var off = elm.offset();
-        var l = off.left;
-        var w = elm.width();
-        // var docH = $(".navigation").height();
-        var docW = $(".navigation").width();
-        var isEntirelyVisible = (l + w <= docW);
-        if (!isEntirelyVisible) {
-            $(this).addClass('edge');
-        } else {
-            $(this).removeClass('edge');
+        if ($('.submenu:first', this).exists()) {
+            var elm = $('.submenu:first', this);
+            var off = elm.offset();
+            var l = off.left;
+            var w = elm.width();
+            // var docH = $(".navigation").height();
+            var docW = $(".navigation").width();
+            var isEntirelyVisible = (l + w <= docW);
+            if (!isEntirelyVisible) {
+                $(this).addClass('edge');
+            } else {
+                $(this).removeClass('edge');
+            }
         }
     });
 
