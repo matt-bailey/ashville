@@ -1,4 +1,4 @@
-<div id="hero-slideshow" class="carousel carousel-buttons">
+<div id="hero-slideshow" class="carousel carousel-fade slide carousel-dots">
     <div class="carousel-inner">
         <% loop Slides %>
         <article class="item<% if First %> active<% end_if %>">

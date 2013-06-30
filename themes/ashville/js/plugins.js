@@ -48,7 +48,7 @@ $.fn.exists = function(callback) {
             html = '<div class="carousel-nav" data-target="' + $(this).attr('id') + '"><ul>';
 
             // Added functionality for thumbnails or side buttons
-            $(this).find('.item img').each(function (index) {
+            /*$(this).find('.item img').each(function (index) {
 
                 var imgSrc = $(this).attr('src');
                 var slideTitle = $(this).parent().attr('title');
@@ -62,12 +62,28 @@ $.fn.exists = function(callback) {
                 });
 
                 // If buttons
-                $('.carousel-buttons').exists(function() {
+                $('.carousel-dots').exists(function() {
                     html += '<li><a';
                     if (index === 0) { html += ' class="active"'; }
                     html += ' href="' + slideLink + '" title="' + slideTitle + '">' + slideTitle + '</a></li>';
                 });
 
+            });*/
+
+            // Added functionality for dots or thumbnails
+            $(this).find('.item img').each(function (index) {
+                var thumbSrc = $(this).attr('src');
+                if ($('.carousel-dots').length) {
+                    // console.log("Dots");
+                    html += '<li><a';
+                    if (index === 0) { html += ' class="active"'; }
+                    html += ' href="#">•</a></li>';
+                } else if ($('.carousel-thumbs').length) {
+                    // console.log("Thumbs");
+                    html += '<li><a';
+                    if (index === 0) { html += ' class="active"'; }
+                    html += ' href="#"><img src="' + thumbSrc + '" /></a></li>';
+                }
             });
 
             html += '</ul>';
@@ -128,22 +144,22 @@ $.fn.exists = function(callback) {
     $.fn.rwdImageMaps = function() {
         var $img = this,
             version = parseFloat($.fn.jquery);
-        
+
         var rwdImageMap = function() {
             $img.each(function() {
                 if (typeof($(this).attr('usemap')) == 'undefined')
                     return;
-                
+
                 var that = this,
                     $that = $(that);
-                
+
                 // Since WebKit doesn't know the height until after the image has loaded, perform everything in an onload copy
                 $('<img />').load(function() {
                     var w,
                         h,
                         attrW = 'width',
                         attrH = 'height';
-                    
+
                     // jQuery < 1.6 incorrectly uses the actual image width/height instead of the attribute's width/height
                     if (version < 1.6)
                         w = that.getAttribute(attrW),
@@ -151,7 +167,7 @@ $.fn.exists = function(callback) {
                     else
                         w = $that.attr(attrW),
                         h = $that.attr(attrH);
-                    
+
                     if (!w || !h) {
                         var temp = new Image();
                         temp.src = $that.attr('src');
@@ -160,20 +176,20 @@ $.fn.exists = function(callback) {
                         if (!h)
                             h = temp.height;
                     }
-                    
+
                     var wPercent = $that.width()/100,
                         hPercent = $that.height()/100,
                         map = $that.attr('usemap').replace('#', ''),
                         c = 'coords';
-                    
+
                     $('map[name="' + map + '"]').find('area').each(function() {
                         var $this = $(this);
                         if (!$this.data(c))
                             $this.data(c, $this.attr(c));
-                        
+
                         var coords = $this.data(c).split(','),
                             coordsPercent = new Array(coords.length);
-                        
+
                         for (var i = 0; i < coordsPercent.length; ++i) {
                             if (i % 2 === 0)
                                 coordsPercent[i] = parseInt(((coords[i]/w)*100)*wPercent);
@@ -186,7 +202,7 @@ $.fn.exists = function(callback) {
             });
         };
         $(window).resize(rwdImageMap).trigger('resize');
-        
+
         return this;
     };
 })(jQuery);

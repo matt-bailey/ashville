@@ -129,7 +129,7 @@ $(document).ready(function() {
     });
 
     // Initialise slideshow pagination
-    $('.carousel-thumbs, .carousel-buttons').slideshowPagination();
+    $('.carousel-thumbs, .carousel-dots').slideshowPagination();
 
 
     /* ==========================================================================
